@@ -16,4 +16,3 @@
 ![Screenshot](assets/screenshots/amor_resume.png)
 ![Screenshot](assets/screenshots/amor_experience.png)
 ![Screenshot](assets/screenshots/amor_contact.png)
-![Screenshot](assets/screenshots/amor_typography.png)

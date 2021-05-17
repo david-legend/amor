@@ -49,4 +49,8 @@ class AppRadius {
   static const BorderRadius noRadius = const BorderRadius.all(
     const Radius.circular(Sizes.RADIUS_0),
   );
+
+  static const BorderRadius aboutRadius = const BorderRadius.all(
+    const Radius.circular(Sizes.RADIUS_8),
+  );
 }

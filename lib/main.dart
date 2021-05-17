@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'app_theme.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(AmorApp());
 }
 
-class MyApp extends StatelessWidget {
+class AmorApp extends StatelessWidget {
   final _appRouter = AppRouter();
 
   @override

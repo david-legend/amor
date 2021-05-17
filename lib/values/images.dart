@@ -6,5 +6,6 @@ class ImagePath {
   static const String screenshotsDir = "assets/screenshots";
 
   //Splash Items
-  static const String dummy = "$imageDir/dummy.png";
+  static const String sample_1 = "$imageDir/sample_1.png";
+  static const String sample_2 = "$imageDir/sample_2.png";
 }

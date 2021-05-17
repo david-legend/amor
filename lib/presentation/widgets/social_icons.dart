@@ -1,7 +1,6 @@
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
-
-import 'package:url_launcher/url_launcher.dart';
+import 'package:amor/utils/functions.dart';
 
 class SocialIcons extends StatelessWidget {
   final Color? iconColor;
@@ -34,7 +33,7 @@ class SocialIcons extends StatelessWidget {
     for (var index = 0; index < icons.length; index++) {
       iconWidgets.add(
         InkWell(
-          onTap: () => _openSocialLink(socialLinks[index]),
+          onTap: () => openUrlLink(socialLinks[index]),
           child: Icon(
             icons[index],
             color: iconColor,
@@ -45,18 +44,5 @@ class SocialIcons extends StatelessWidget {
     }
 
     return iconWidgets;
-  }
-
-  Future<void> _openSocialLink(String url) async {
-    if (await canLaunch(url)) {
-      print("URL:: $url");
-      await launch(
-        url,
-        forceSafariVC: false,
-        forceWebView: false,
-      );
-    } else {
-      throw 'Could not launch $url';
-    }
   }
 }

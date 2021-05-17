@@ -7,6 +7,8 @@ class SubSectionTitle extends StatelessWidget {
   final String subtitle;
   final TextStyle? titleStyle;
   final TextStyle? subtitleStyle;
+  final Color? titleTextColor;
+  final Color? subtitleTextColor;
   final CrossAxisAlignment crossAxisAlignment;
 
   SubSectionTitle({
@@ -14,6 +16,8 @@ class SubSectionTitle extends StatelessWidget {
     required this.subtitle,
     this.titleStyle,
     this.subtitleStyle,
+    this.titleTextColor,
+    this.subtitleTextColor,
     this.crossAxisAlignment = CrossAxisAlignment.start,
   });
 
@@ -28,7 +32,7 @@ class SubSectionTitle extends StatelessWidget {
           style: titleStyle ??
               textTheme.subtitle2?.copyWith(
                 fontSize: Sizes.TEXT_SIZE_20,
-                color: AppColors.accentColor,
+                color: titleTextColor ?? AppColors.accentColor,
               ),
         ),
         SpaceH8(),
@@ -37,7 +41,7 @@ class SubSectionTitle extends StatelessWidget {
           style: subtitleStyle ??
               textTheme.subtitle1?.copyWith(
                 fontSize: Sizes.TEXT_SIZE_24,
-                color: AppColors.white,
+                color: subtitleTextColor ?? AppColors.white,
               ),
         ),
       ],

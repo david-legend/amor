@@ -1,5 +1,7 @@
 import 'package:amor/presentation/layout/adaptive.dart';
+import 'package:amor/presentation/widgets/section_title.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
+import 'package:amor/presentation/widgets/sub_section_title.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -14,10 +16,7 @@ class AboutSectionWeb extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              StringConst.ABOUT_ME,
-              style: textTheme.headline2,
-            ),
+            SectionTitle(title: StringConst.ABOUT_ME),
             SpaceH16(),
             Container(
               width: screenWidth,
@@ -29,20 +28,9 @@ class AboutSectionWeb extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    StringConst.PROFESSIONAL,
-                    style: textTheme.subtitle2?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_20,
-                      color: AppColors.accentColor,
-                    ),
-                  ),
-                  SpaceH8(),
-                  Text(
-                    StringConst.SUMMARY_TITLE,
-                    style: textTheme.subtitle1?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_24,
-                      color: AppColors.white,
-                    ),
+                  SubSectionTitle(
+                    title: StringConst.PROFESSIONAL,
+                    subtitle: StringConst.SUMMARY_TITLE,
                   ),
                   SpaceH16(),
                   SizedBox(

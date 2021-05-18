@@ -1,8 +1,6 @@
 import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/widgets/circle.dart';
 import 'package:amor/presentation/widgets/experience_tree.dart';
-import 'package:amor/presentation/widgets/section_title.dart';
-import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/presentation/widgets/sub_section_title.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';

@@ -3,6 +3,7 @@ import 'package:amor/presentation/pages/home/sections/education_section/educatio
 import 'package:amor/presentation/pages/home/sections/experience_section/experience_section.dart';
 import 'package:amor/presentation/pages/home/sections/footer_section/footer_section.dart';
 import 'package:amor/presentation/pages/home/sections/header_section/header_section.dart';
+import 'package:amor/presentation/pages/home/sections/nav_section/nav_section.dart';
 import 'package:amor/presentation/pages/home/sections/skills_section/skills_section.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
@@ -15,6 +16,10 @@ class HomePage extends StatelessWidget {
       body: ListView(
         padding: EdgeInsets.zero,
         children: [
+          NavSection(),
+          SizedBox(
+            height: 1.0,
+          ),
           HeaderSection(),
           SpaceH24(),
           Padding(

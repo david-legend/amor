@@ -19,10 +19,15 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color offWhite = Color(0xFFF3F3F3);
 
+  //light Purple
+  static const Color lightPurple400 = Color(0xFF7E65BF);
+
   //Purple
   static const Color purple50 = Color(0xFF664AB0);
   static const Color purple100 = Color(0xFF5F3DB2);
+  static const Color purple150 = Color(0xFF6648B4);
   static const Color purple200 = Color(0xFF5D3CAD);
+  static const Color purple300 = Color(0xFF5F3FB1);
   static const Color purple500 = Color(0xFF4B2BA2);
   static const Color purple600 = Color(0xFF4F2E95);
 

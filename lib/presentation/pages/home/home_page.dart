@@ -1,5 +1,6 @@
 import 'package:amor/presentation/pages/home/sections/about_section/about_section.dart';
 import 'package:amor/presentation/pages/home/sections/education_section/education_section.dart';
+import 'package:amor/presentation/pages/home/sections/experience_section/experience_section.dart';
 import 'package:amor/presentation/pages/home/sections/home_section/home_section.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
@@ -23,6 +24,8 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
             child: EducationSection(),
           ),
+          SpaceH24(),
+          ExperienceSection(),
         ],
       ),
     );

@@ -18,11 +18,12 @@ class StringConst {
   static const String ABOUT_ME_SUMMARY =
       '''I am a versatile, enthusiastic and passionate UI/UX Designer with a solid background in Human-Centered Design to be integrated in User Experiences. Aims to have compelling opportunities to leverage and extend my skills.\nI have learned and honed valuable collaboration and team management skills that have allowed me to both manage and work constructively and inventively in group-based environment''';
 
+  //Education Section
   static const String RESUME = "Resume";
   static const String MY = "My";
   static const String EDUCATION = "Education";
 
-  //Experience
+  //Education Section Data
   static const String CURRENT_MONTH_YEAR = "June 2014";
   static const String STARTED_MONTH_YEAR = "May 2017";
 
@@ -79,6 +80,9 @@ class StringConst {
       "Interface with clients and provide technological expertise";
   static const String LOCATION_4 = "Santase - Kumasi";
   static const String DURATION_4 = "May 2020 - Current";
+
+  //Experience Section
+  static const String EXPERIENCE = "Experience";
 
   //Social Links
   static const String LINKED_IN_URL = "https:linkedin.com/in/";

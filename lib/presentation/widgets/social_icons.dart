@@ -10,7 +10,7 @@ class SocialIcons extends StatelessWidget {
   final List<String> socialLinks;
 
   SocialIcons({
-    this.iconColor = AppColors.darkGrey200,
+    this.iconColor = AppColors.darkGrey400,
     this.size = Sizes.ICON_SIZE_20,
     required this.spacing,
     required this.icons,

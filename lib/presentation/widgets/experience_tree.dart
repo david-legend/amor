@@ -23,9 +23,13 @@ class ExperienceTree extends StatelessWidget {
     this.leftLeafSubtitleStyle,
     this.leftLeafSubtitleIcon,
     this.leftLeafTitleIcon,
+    this.leftLeafIconColor,
     this.rightLeafTitleStyle,
     this.rightLeafSubtitleStyle,
     this.rightLeafBodyStyle,
+    this.veinsColor,
+    this.outerJointColor,
+    this.innerJointColor,
   });
 
   final Widget? head;
@@ -45,6 +49,10 @@ class ExperienceTree extends StatelessWidget {
   final TextStyle? rightLeafSubtitleStyle;
   final Icon? leftLeafTitleIcon;
   final Icon? leftLeafSubtitleIcon;
+  final Color? leftLeafIconColor;
+  final Color? veinsColor;
+  final Color? outerJointColor;
+  final Color? innerJointColor;
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +68,7 @@ class ExperienceTree extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
-                color: headBackgroundColor ?? AppColors.accentColor50,
+                color: headBackgroundColor ?? AppColors.accentColor100,
               ),
               child: Text(
                 headTitle,
@@ -86,7 +94,7 @@ class ExperienceTree extends StatelessWidget {
               ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
-                color: tailBackgroundColor ?? AppColors.accentColor50,
+                color: tailBackgroundColor ?? AppColors.accentColor100,
               ),
               child: Text(
                 tailTitle,
@@ -126,6 +134,12 @@ class ExperienceTree extends StatelessWidget {
           height: isDisplaySmallDesktop(context)
               ? assignHeight(context, 0.45)
               : assignHeight(context, 0.35),
+          veinsColor: veinsColor,
+          innerJointColor: innerJointColor,
+          outerJointColor: outerJointColor,
+          leftLeafTitleIcon: leftLeafTitleIcon,
+          leftLeafSubtitleIcon: leftLeafSubtitleIcon,
+          leftLeafIconColor: leftLeafIconColor,
         ),
       );
     }
@@ -140,6 +154,7 @@ class ExperienceBranch extends StatefulWidget {
     required this.leftLeafSubtitle,
     this.leftLeafTitleIcon,
     this.leftLeafSubtitleIcon,
+    this.leftLeafIconColor,
     required this.rightLeafTitle,
     required this.rightLeafSubtitle,
     required this.rightLeafBody,
@@ -153,6 +168,9 @@ class ExperienceBranch extends StatefulWidget {
     this.height = 200,
     this.customPainter,
     this.stalk = 0.1,
+    this.veinsColor = AppColors.accentColor100,
+    this.outerJointColor = AppColors.accentColor100,
+    this.innerJointColor = AppColors.purple600,
   });
 
   final double width;
@@ -171,7 +189,11 @@ class ExperienceBranch extends StatefulWidget {
   final TextStyle? rightLeafSubtitleStyle;
   final Icon? leftLeafTitleIcon;
   final Icon? leftLeafSubtitleIcon;
+  final Color? leftLeafIconColor;
   final CustomPainter? customPainter;
+  final Color? veinsColor;
+  final Color? outerJointColor;
+  final Color? innerJointColor;
 
   @override
   _ExperienceBranchState createState() => _ExperienceBranchState();
@@ -213,9 +235,9 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
       foregroundPainter: widget.customPainter ??
           TreePainter(
             stalk: 0.1,
-            veinsColor: AppColors.accentColor50,
-            outerJointColor: AppColors.accentColor50,
-            innerJointColor: AppColors.purple600,
+            veinsColor: widget.veinsColor ?? AppColors.accentColor100,
+            innerJointColor: widget.innerJointColor ?? AppColors.purple600,
+            outerJointColor: widget.outerJointColor ?? AppColors.accentColor100,
           ),
       child: Container(
         width: widget.width,
@@ -277,6 +299,7 @@ class LeftLeaf extends StatelessWidget {
     this.subtitleIcon,
     this.titleTextStyle,
     this.subtitleTextStyle,
+    this.defaultIconColor = AppColors.darkGrey100,
   });
 
   final String title;
@@ -285,6 +308,7 @@ class LeftLeaf extends StatelessWidget {
   final TextStyle? titleTextStyle;
   final Icon? subtitleIcon;
   final Icon? titleIcon;
+  final Color? defaultIconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -297,9 +321,10 @@ class LeftLeaf extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: subtitleTextStyle ??
+                style: titleTextStyle ??
                     textTheme.bodyText2?.copyWith(
                       color: AppColors.darkGrey100,
+                      fontSize: Sizes.TEXT_SIZE_12,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -308,7 +333,7 @@ class LeftLeaf extends StatelessWidget {
                   Icon(
                     Icons.access_time,
                     color: AppColors.darkGrey100,
-                    size: 18,
+                    size: Sizes.ICON_SIZE_18,
                   ),
             ],
           ),
@@ -318,9 +343,9 @@ class LeftLeaf extends StatelessWidget {
             children: [
               Text(
                 subtitle,
-                style: titleTextStyle ??
+                style: subtitleTextStyle ??
                     textTheme.bodyText2?.copyWith(
-                      color: AppColors.darkGrey100,
+                      color: defaultIconColor,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -328,8 +353,8 @@ class LeftLeaf extends StatelessWidget {
               subtitleIcon ??
                   Icon(
                     Icons.location_on,
-                    color: AppColors.darkGrey100,
-                    size: 18,
+                    color: defaultIconColor,
+                    size: Sizes.ICON_SIZE_18,
                   ),
             ],
           )
@@ -372,7 +397,7 @@ class RightLeaf extends StatelessWidget {
               style: titleTextStyle ??
                   textTheme.subtitle1?.copyWith(
                     fontSize: Sizes.TEXT_SIZE_18,
-                    color: AppColors.black50,
+                    color: AppColors.darkGrey800,
                   ),
             ),
           ),
@@ -381,7 +406,7 @@ class RightLeaf extends StatelessWidget {
             style: subtitleTextStyle ??
                 textTheme.subtitle2?.copyWith(
                   fontStyle: FontStyle.italic,
-                  color: AppColors.black50,
+                  color: AppColors.darkGrey800,
                 ),
           ),
           SpaceH8(),
@@ -405,8 +430,11 @@ class RightLeaf extends StatelessWidget {
         Body(
           body: body[index],
           bodyTextStyle: bodyTextStyle ??
-              textTheme.bodyText2?.copyWith(color: AppColors.primaryText),
-          color: AppColors.darkGrey50,
+              textTheme.bodyText2?.copyWith(
+                color: AppColors.primaryText,
+                fontWeight: FontWeight.bold,
+              ),
+          color: AppColors.darkGrey300,
         ),
       );
       bodyWidgets.add(SpaceH8());

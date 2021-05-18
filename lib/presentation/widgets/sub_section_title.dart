@@ -35,12 +35,12 @@ class SubSectionTitle extends StatelessWidget {
                 color: titleTextColor ?? AppColors.accentColor,
               ),
         ),
-        SpaceH8(),
+        SpaceH4(),
         Text(
           subtitle,
           style: subtitleStyle ??
-              textTheme.subtitle1?.copyWith(
-                fontSize: Sizes.TEXT_SIZE_24,
+              textTheme.headline6?.copyWith(
+                fontSize: Sizes.TEXT_SIZE_30,
                 color: subtitleTextColor ?? AppColors.white,
               ),
         ),

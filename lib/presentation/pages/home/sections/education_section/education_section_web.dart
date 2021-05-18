@@ -30,7 +30,7 @@ class EducationSectionWeb extends StatelessWidget {
           SubSectionTitle(
             title: StringConst.MY,
             subtitle: StringConst.EDUCATION,
-            subtitleTextColor: AppColors.darkGrey200,
+            subtitleTextColor: AppColors.darkGrey400,
           ),
           SpaceH60(),
           Row(
@@ -43,7 +43,7 @@ class EducationSectionWeb extends StatelessWidget {
                   painter: Circle(
                     offset: Offset(smOffsetDx, smOffsetDy),
                     radius: smCircleRadius,
-                    color: AppColors.accentColor50,
+                    color: AppColors.accentColor100,
                   ),
                 ),
               ),
@@ -62,7 +62,7 @@ class EducationSectionWeb extends StatelessWidget {
                   painter: Circle(
                     offset: Offset(lgOffsetDx, lgOffsetDy),
                     radius: lgCircleRadius,
-                    color: AppColors.accentColor50,
+                    color: AppColors.accentColor100,
                   ),
                 ),
               ),

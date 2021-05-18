@@ -13,12 +13,12 @@ class TreePainter extends CustomPainter {
     this.stalk = 0.1,
   }) : assert(stalk <= 1 || stalk >= 0);
 
-  final double veinsStrokeWidth;
   final double stalk; //determines the how far the horizontal should go
+  final double veinsStrokeWidth;
   final double jointsStrokeWidth;
-  final Color veinsColor;
   final double innerJointRadius;
   final double outerJointRadius;
+  final Color veinsColor;
   final Color innerJointColor;
   final Color outerJointColor;
 

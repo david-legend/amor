@@ -7,16 +7,20 @@ import 'package:amor/presentation/widgets/sub_section_title.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
+const double smCircleRadius = 200;
+const double lgCircleRadius = 280;
+
 class EducationSectionWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
-    double smCircleWidth = screenWidth * 0.1;
-    double smOffsetDx = screenWidth * 0.0;
+    double circleWidth = screenWidth * 0.1;
+    double smOffsetDx = -smCircleRadius / 2;
     double smOffsetDy = screenHeight * 0.7;
+    double lgOffsetDx = circleWidth + (lgCircleRadius / 3);
     double lgOffsetDy = screenHeight * 0.2;
-    double bigCircleWidth = screenWidth * 0.2;
+
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -33,12 +37,12 @@ class EducationSectionWeb extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                height: smCircleWidth,
-                width: smCircleWidth,
+                height: circleWidth,
+                width: circleWidth,
                 child: CustomPaint(
                   painter: Circle(
-                    offset: Offset(-100, smOffsetDy),
-                    radius: 200,
+                    offset: Offset(smOffsetDx, smOffsetDy),
+                    radius: smCircleRadius,
                     color: AppColors.accentColor50,
                   ),
                 ),
@@ -52,12 +56,12 @@ class EducationSectionWeb extends StatelessWidget {
               ),
               Spacer(),
               Container(
-                height: smCircleWidth,
-                width: smCircleWidth,
+                height: circleWidth,
+                width: circleWidth,
                 child: CustomPaint(
                   painter: Circle(
-                    offset: Offset(smCircleWidth + 120, lgOffsetDy),
-                    radius: 280,
+                    offset: Offset(lgOffsetDx, lgOffsetDy),
+                    radius: lgCircleRadius,
                     color: AppColors.accentColor50,
                   ),
                 ),

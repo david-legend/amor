@@ -78,34 +78,34 @@ class ExperienceSection extends StatelessWidget {
                 ),
           ),
           SpaceH16(),
-          ..._buildRoles(roles),
+          ..._buildBody(roles),
         ],
       ),
     );
   }
 
-  List<Widget> _buildRoles(List<String> roles) {
-    List<Widget> roleWidgets = [];
+  List<Widget> _buildBody(List<String> roles) {
+    List<Widget> bodyWidgets = [];
     for (var index = 0; index < roles.length; index++) {
-      roleWidgets.add(Role(role: roles[index]));
-      roleWidgets.add(SpaceH8());
+      bodyWidgets.add(Body(body: roles[index]));
+      bodyWidgets.add(SpaceH8());
     }
 
-    return roleWidgets;
+    return bodyWidgets;
   }
 }
 
-class Role extends StatelessWidget {
-  Role({
-    required this.role,
-    this.roleTextStyle,
+class Body extends StatelessWidget {
+  Body({
+    required this.body,
+    this.bodyTextStyle,
     this.icon = Icons.arrow_right,
     this.iconSize = Sizes.ICON_SIZE_18,
     this.color = AppColors.accentColor,
   });
 
-  final String role;
-  final TextStyle? roleTextStyle;
+  final String body;
+  final TextStyle? bodyTextStyle;
   final IconData icon;
   final Color color;
   final double iconSize;
@@ -123,8 +123,8 @@ class Role extends StatelessWidget {
         SpaceW8(),
         Expanded(
           child: Text(
-            role,
-            style: roleTextStyle ??
+            body,
+            style: bodyTextStyle ??
                 textTheme.bodyText1?.copyWith(
                   color: AppColors.accentColor,
                 ),

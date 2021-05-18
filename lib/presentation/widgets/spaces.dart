@@ -90,6 +90,15 @@ class SpaceH40 extends StatelessWidget {
   }
 }
 
+class SpaceH60 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 60.0,
+    );
+  }
+}
+
 class SpaceH180 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

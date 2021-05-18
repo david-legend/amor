@@ -38,21 +38,25 @@ class ExperienceTree extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Container(
-      child: ListView(
-        controller: scrollController,
+      child: Column(
         children: [
           Center(
             child: Container(
-              padding: EdgeInsets.all(Sizes.PADDING_8),
+              padding: const EdgeInsets.symmetric(
+                horizontal: Sizes.PADDING_16,
+                vertical: Sizes.PADDING_8,
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
-                color: headBackgroundColor ??
-                    AppColors.primaryColor.withOpacity(0.6),
+                color: headBackgroundColor ?? AppColors.accentColor50,
               ),
               child: Text(
                 headTitle,
                 style: headTitleStyle ??
-                    textTheme.subtitle1?.copyWith(color: AppColors.accentColor),
+                    textTheme.subtitle1?.copyWith(
+                      color: AppColors.purple50,
+                      fontSize: Sizes.TEXT_SIZE_16,
+                    ),
               ),
             ),
           ),
@@ -64,16 +68,21 @@ class ExperienceTree extends StatelessWidget {
           ),
           Center(
             child: Container(
-              padding: EdgeInsets.all(Sizes.PADDING_8),
+              padding: const EdgeInsets.symmetric(
+                horizontal: Sizes.PADDING_16,
+                vertical: Sizes.PADDING_8,
+              ),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
-                color: tailBackgroundColor ??
-                    AppColors.primaryColor.withOpacity(0.6),
+                color: tailBackgroundColor ?? AppColors.accentColor50,
               ),
               child: Text(
                 tailTitle,
                 style: tailTitleStyle ??
-                    textTheme.subtitle1?.copyWith(color: AppColors.accentColor),
+                    textTheme.subtitle1?.copyWith(
+                      color: AppColors.purple50,
+                      fontSize: Sizes.TEXT_SIZE_16,
+                    ),
               ),
             ),
           ),
@@ -173,9 +182,9 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
       foregroundPainter: widget.customPainter ??
           TreePainter(
             stalk: 0.1,
-            veinsColor: AppColors.primaryColor.withOpacity(0.6),
-            outerJointColor: AppColors.primaryColor.withOpacity(0.6),
-            innerJointColor: AppColors.primaryColor,
+            veinsColor: AppColors.accentColor50,
+            outerJointColor: AppColors.accentColor50,
+            innerJointColor: AppColors.purple600,
           ),
       child: Container(
         width: widget.width,
@@ -251,14 +260,16 @@ class LocationDateLeaf extends StatelessWidget {
               Text(
                 duration,
                 style: durationTextStyle ??
-                    textTheme.bodyText2
-                        ?.copyWith(color: AppColors.primaryColor100),
+                    textTheme.bodyText2?.copyWith(
+                      color: AppColors.darkGrey100,
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               SpaceW4(),
               durationIcon ??
                   Icon(
                     Icons.access_time,
-                    color: AppColors.accentColor,
+                    color: AppColors.darkGrey100,
                     size: 18,
                   ),
             ],
@@ -270,13 +281,16 @@ class LocationDateLeaf extends StatelessWidget {
               Text(
                 location,
                 style: locationTextStyle ??
-                    textTheme.bodyText2?.copyWith(color: AppColors.primaryText),
+                    textTheme.bodyText2?.copyWith(
+                      color: AppColors.darkGrey100,
+                      fontWeight: FontWeight.bold,
+                    ),
               ),
               SpaceW4(),
               locationIcon ??
                   Icon(
                     Icons.location_on,
-                    color: AppColors.accentColor,
+                    color: AppColors.darkGrey100,
                     size: 18,
                   ),
             ],
@@ -320,7 +334,7 @@ class RoleLeaf extends StatelessWidget {
               style: companyTextStyle ??
                   textTheme.subtitle1?.copyWith(
                     fontSize: Sizes.TEXT_SIZE_18,
-                    color: AppColors.accentColor,
+                    color: AppColors.black50,
                   ),
             ),
           ),
@@ -329,7 +343,7 @@ class RoleLeaf extends StatelessWidget {
             style: positionTextStyle ??
                 textTheme.subtitle2?.copyWith(
                   fontStyle: FontStyle.italic,
-                  color: AppColors.accentColor,
+                  color: AppColors.black50,
                 ),
           ),
           SpaceH8(),
@@ -354,7 +368,7 @@ class RoleLeaf extends StatelessWidget {
           role: roles[index],
           roleTextStyle: roleTextStyle ??
               textTheme.bodyText2?.copyWith(color: AppColors.primaryText),
-          color: AppColors.primaryColor,
+          color: AppColors.darkGrey50,
         ),
       );
       roleWidgets.add(SpaceH8());

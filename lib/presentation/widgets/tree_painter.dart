@@ -5,7 +5,7 @@ class TreePainter extends CustomPainter {
   TreePainter({
     this.veinsStrokeWidth = Sizes.SIZE_5,
     this.jointsStrokeWidth = Sizes.SIZE_5,
-    this.innerJointColor = AppColors.primaryColor100,
+    this.innerJointColor = AppColors.purple100,
     this.veinsColor = AppColors.accentColor,
     this.outerJointColor = AppColors.accentColor,
     this.innerJointRadius = Sizes.RADIUS_8,

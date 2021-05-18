@@ -23,7 +23,7 @@ class StringConst {
   static const String EDUCATION = "Education";
 
   //Experience
-  static const String CURRENT_MONTH_YEAR = "May 2020 - Current";
+  static const String CURRENT_MONTH_YEAR = "June 2014";
   static const String STARTED_MONTH_YEAR = "May 2017";
 
   static const String EDUCATION_1 = "Makedu";

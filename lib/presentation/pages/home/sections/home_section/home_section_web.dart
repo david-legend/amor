@@ -92,7 +92,7 @@ class HomeSectionWeb extends StatelessWidget {
                     height: cirleWidth,
                     offsetDx: contentAreaWidth * 0.825,
                     offsetDy: contentAreaHeight * 0.35,
-                    color: AppColors.primaryColor100,
+                    color: AppColors.purple100,
                     radius: Sizes.RADIUS_140,
                   ),
                   _drawCircle(
@@ -100,7 +100,7 @@ class HomeSectionWeb extends StatelessWidget {
                     height: cirleWidth,
                     offsetDx: contentAreaWidth * 0.1,
                     offsetDy: contentAreaHeight * 0.9,
-                    color: AppColors.primaryColor100,
+                    color: AppColors.purple100,
                     radius: Sizes.RADIUS_40,
                   ),
                   Center(

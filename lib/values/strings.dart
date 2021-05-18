@@ -21,6 +21,7 @@ class StringConst {
   //Education Section
   static const String RESUME = "Resume";
   static const String MY = "My";
+
   static const String EDUCATION = "Education";
 
   //Education Section Data
@@ -83,6 +84,22 @@ class StringConst {
 
   //Experience Section
   static const String EXPERIENCE = "Experience";
+
+  //Skills Section
+  static const String MY_CODING = "My Coding";
+  static const String SKILLS = "Skills";
+
+  static const String FLUTTER = "Flutter";
+  static const String JAVA = "Java";
+  static const String ANDROID = "Android";
+  static const String KOTLIN = "Kotlin";
+  static const String JAVASCRIPT = "Javascript";
+  static const String PHP = "PHP";
+  static const String LARAVEL = "Laravel";
+  static const String SQL = "SQL";
+  static const String WORDPRESS = "Wordpress";
+  static const String BOOTSTRAP = "Bootstrap";
+  static const String HTML_CSS = "HTML/CSS";
 
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";

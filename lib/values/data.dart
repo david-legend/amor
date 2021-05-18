@@ -18,6 +18,16 @@ class ExperienceData {
   final List<String> body;
 }
 
+class SkillData {
+  SkillData({
+    required this.skillName,
+    required this.skillLevel,
+  });
+
+  final String skillName;
+  final double skillLevel;
+}
+
 class Data {
   static List<ExperienceData> experienceData = [
     ExperienceData(
@@ -56,5 +66,19 @@ class Data {
       location: StringConst.LOCATION_1,
       duration: StringConst.DURATION_1,
     ),
+  ];
+
+  static List<SkillData> skillData = [
+    SkillData(skillLevel: 95, skillName: StringConst.FLUTTER),
+    SkillData(skillLevel: 70, skillName: StringConst.JAVA),
+    SkillData(skillLevel: 78, skillName: StringConst.ANDROID),
+    SkillData(skillLevel: 70, skillName: StringConst.KOTLIN),
+    SkillData(skillLevel: 80, skillName: StringConst.JAVASCRIPT),
+    SkillData(skillLevel: 80, skillName: StringConst.PHP),
+    SkillData(skillLevel: 80, skillName: StringConst.LARAVEL),
+    SkillData(skillLevel: 80, skillName: StringConst.SQL),
+    SkillData(skillLevel: 90, skillName: StringConst.WORDPRESS),
+    SkillData(skillLevel: 80, skillName: StringConst.BOOTSTRAP),
+    SkillData(skillLevel: 80, skillName: StringConst.HTML_CSS),
   ];
 }

@@ -8,9 +8,9 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 
 const kPadding24 = Sizes.PADDING_24;
-const kSpacing16 = Sizes.SIZE_20;
+const kSpacing20 = Sizes.SIZE_20;
 
-class HomeSectionWeb extends StatelessWidget {
+class HeaderSectionWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -66,7 +66,7 @@ class HomeSectionWeb extends StatelessWidget {
                       StringConst.GITHUB_URL,
                       StringConst.TWITTER_URL,
                     ],
-                    spacing: kSpacing16,
+                    spacing: kSpacing20,
                   ),
                   _drawCircle(
                     width: cirleWidth,

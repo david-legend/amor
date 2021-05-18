@@ -84,8 +84,21 @@ class StringConst {
   //Experience Section
   static const String EXPERIENCE = "Experience";
 
-  //Social Links
+  //Footer Section
+  static const String RIGHTS_RESERVED = "© 2021 All rights reserved";
+  static const String BUILT_BY = "Built by";
+  static const String DAVID_COBBINA = "David Cobbina";
+  static const String DESIGNED_BY = "Built by";
+  static const String ADEEL_RAZA = "Adeel Raza";
+  static const String MADE_IN_GHANA = "Made in";
+  static const String WITH_LOVE = "with";
+  static const String FIND_ME = "Find me on..";
+
+  //URL Links
   static const String LINKED_IN_URL = "https:linkedin.com/in/";
   static const String GITHUB_URL = "https://github.com/";
   static const String TWITTER_URL = "http://twitter.com/";
+  static const String DAVID_LEGEND_URL = "https://davidcobbina.com/#/";
+  static const String DESIGN_URL =
+      "https://www.behance.net/gallery/95351691/Resume-Design-03";
 }

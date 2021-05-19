@@ -14,9 +14,10 @@ class HeaderSectionWeb extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     double contentAreaWidth = assignWidth(context, 0.5);
     double contentAreaHeight = assignHeight(context, 0.7);
-    double cirleWidth = contentAreaWidth * 0.1;
+    double circleWidth = contentAreaWidth * 0.1;
 
     return Container(
       child: Row(
@@ -25,14 +26,15 @@ class HeaderSectionWeb extends StatelessWidget {
             width: contentAreaWidth,
             height: contentAreaHeight,
             backgroundColor: AppColors.offWhite,
-            child: Center(
+            child: Padding(
+              padding: EdgeInsets.only(left: sidePadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   _drawCircle(
-                    width: cirleWidth,
-                    height: cirleWidth,
+                    width: circleWidth,
+                    height: circleWidth,
                     offsetDx: contentAreaWidth * 0.4,
                     offsetDy: contentAreaHeight * 0.0,
                   ),
@@ -69,8 +71,8 @@ class HeaderSectionWeb extends StatelessWidget {
                     spacing: kSpacing20,
                   ),
                   _drawCircle(
-                    width: cirleWidth,
-                    height: cirleWidth,
+                    width: circleWidth,
+                    height: circleWidth,
                     offsetDx: contentAreaWidth * 0.0,
                     offsetDy: contentAreaHeight * 0.15,
                     radius: Sizes.RADIUS_40,
@@ -88,16 +90,16 @@ class HeaderSectionWeb extends StatelessWidget {
               child: Stack(
                 children: [
                   _drawCircle(
-                    width: cirleWidth,
-                    height: cirleWidth,
+                    width: circleWidth,
+                    height: circleWidth,
                     offsetDx: contentAreaWidth * 0.825,
                     offsetDy: contentAreaHeight * 0.35,
                     color: AppColors.purple100,
                     radius: Sizes.RADIUS_140,
                   ),
                   _drawCircle(
-                    width: cirleWidth,
-                    height: cirleWidth,
+                    width: circleWidth,
+                    height: circleWidth,
                     offsetDx: contentAreaWidth * 0.1,
                     offsetDy: contentAreaHeight * 0.9,
                     color: AppColors.purple100,

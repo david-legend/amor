@@ -17,21 +17,13 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
     double spacing = (screenWidth / 4) / 2;
 
     return Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 40,
-        vertical: 40,
-      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            margin:
-                EdgeInsets.only(left: Sizes.MARGIN_40, top: Sizes.MARGIN_40),
-            child: SubSectionTitle(
-              title: StringConst.MY_CODING,
-              subtitle: StringConst.SKILLS,
-              subtitleTextColor: AppColors.darkGrey400,
-            ),
+          SubSectionTitle(
+            title: StringConst.MY_CODING,
+            subtitle: StringConst.SKILLS,
+            subtitleTextColor: AppColors.darkGrey400,
           ),
           SpaceH60(),
           Wrap(

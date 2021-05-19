@@ -1,3 +1,4 @@
+import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/pages/home/sections/about_section/about_section.dart';
 import 'package:amor/presentation/pages/home/sections/education_section/education_section.dart';
 import 'package:amor/presentation/pages/home/sections/experience_section/experience_section.dart';
@@ -12,6 +13,7 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     return Scaffold(
       body: Column(
         children: [
@@ -21,21 +23,24 @@ class HomePage extends StatelessWidget {
               padding: EdgeInsets.zero,
               children: [
                 HeaderSection(),
-                SpaceH24(),
+                SpaceH60(),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
+                  padding: EdgeInsets.symmetric(horizontal: sidePadding),
                   child: AboutSection(),
                 ),
-                SpaceH24(),
+                SpaceH60(),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
+                  padding: EdgeInsets.symmetric(horizontal: sidePadding),
                   child: EducationSection(),
                 ),
-                SpaceH24(),
+                SpaceH60(),
                 ExperienceSection(),
-                SkillsSection(),
+                SpaceH60(),
+                Padding(
+                  padding: EdgeInsets.symmetric(horizontal: sidePadding),
+                  child: SkillsSection(),
+                ),
+                SpaceH60(),
                 FooterSection(),
               ],
             ),

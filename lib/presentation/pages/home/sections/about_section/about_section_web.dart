@@ -10,44 +10,82 @@ class AboutSectionWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     double screenWidth = widthOfScreen(context);
+    TextStyle? aboutMeTextStyle = textTheme.bodyText1?.copyWith(
+      fontSize: Sizes.TEXT_SIZE_16,
+      color: AppColors.accentColor,
+      letterSpacing: 0.8,
+    );
 
     return Container(
-      child: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SectionTitle(title: StringConst.ABOUT_ME),
-            SpaceH16(),
-            Container(
-              width: screenWidth,
-              padding: EdgeInsets.all(Sizes.PADDING_20),
-              decoration: BoxDecoration(
-                color: AppColors.primaryColor,
-                borderRadius: AppRadius.aboutRadius,
-              ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SubSectionTitle(
-                    title: StringConst.PROFESSIONAL,
-                    subtitle: StringConst.SUMMARY_TITLE,
-                  ),
-                  SpaceH16(),
-                  SizedBox(
-                    width: screenWidth * 0.7,
-                    child: Text(
-                      StringConst.ABOUT_ME_SUMMARY,
-                      style: textTheme.bodyText1?.copyWith(
-                        fontSize: Sizes.TEXT_SIZE_16,
-                        color: AppColors.accentColor,
-                      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          SectionTitle(title: StringConst.ABOUT_ME),
+          SpaceH16(),
+          Container(
+            width: screenWidth * 0.8,
+            padding: EdgeInsets.only(
+              left: Sizes.PADDING_40,
+              top: Sizes.PADDING_30,
+              bottom: Sizes.PADDING_44,
+            ),
+            decoration: BoxDecoration(
+              color: AppColors.primaryColor,
+              borderRadius: AppRadius.aboutRadius,
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SubSectionTitle(
+                  title: StringConst.PROFESSIONAL,
+                  subtitle: StringConst.SUMMARY_TITLE,
+                ),
+                SpaceH30(),
+                SizedBox(
+                    width: screenWidth * 0.8,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          StringConst.ABOUT_ME_SUMMARY_1,
+                          style: aboutMeTextStyle,
+                        ),
+                        SpaceH8(),
+                        Text(
+                          StringConst.ABOUT_ME_SUMMARY_2,
+                          style: aboutMeTextStyle,
+                        ),
+                        SpaceH8(),
+                        Text(
+                          StringConst.ABOUT_ME_SUMMARY_3,
+                          style: aboutMeTextStyle,
+                        ),
+                        SpaceH8(),
+                        Text(
+                          StringConst.ABOUT_ME_SUMMARY_4,
+                          style: aboutMeTextStyle,
+                        ),
+                        SpaceH8(),
+                        Text(
+                          StringConst.ABOUT_ME_SUMMARY_5,
+                          style: aboutMeTextStyle,
+                        ),
+                        SpaceH8(),
+                      ],
+                    )
+//                    Text(
+//                      StringConst.ABOUT_ME_SUMMARY_1,
+//                      style: textTheme.bodyText1?.copyWith(
+//                        fontSize: Sizes.TEXT_SIZE_16,
+//                        color: AppColors.accentColor,
+//                        letterSpacing: 0.8,
+//                      ),
+//                    ),
                     ),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

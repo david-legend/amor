@@ -23,8 +23,15 @@ class StringConst {
   static const String ABOUT_ME = "About Me";
   static const String PROFESSIONAL = "Professional";
   static const String SUMMARY_TITLE = "Summary";
-  static const String ABOUT_ME_SUMMARY =
-      '''I am a versatile, enthusiastic and passionate UI/UX Designer with a solid background in Human-Centered Design to be integrated in User Experiences. Aims to have compelling opportunities to leverage and extend my skills.\nI have learned and honed valuable collaboration and team management skills that have allowed me to both manage and work constructively and inventively in group-based environment''';
+  static const String ABOUT_ME_SUMMARY_1 =
+      '''I am a versatile, enthusiastic and passionate UI/UX Designer with a solid background in Human-Centered''';
+  static const String ABOUT_ME_SUMMARY_2 =
+      "Design to be integrated in User Experiences. Aims to have compelling opportunities to leverage and extend";
+  static const String ABOUT_ME_SUMMARY_3 = "my skills.";
+  static const String ABOUT_ME_SUMMARY_4 =
+      "I have learned and honed valuable collaboration and team management skills that have allowed me to both";
+  static const String ABOUT_ME_SUMMARY_5 =
+      "manage and work constructively and inventively in group-based environment.";
 
   //Education Section
   static const String MY = "My";
@@ -109,7 +116,7 @@ class StringConst {
 
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";
-  static const String BUILT_BY = "Built by";
+  static const String BUILT_BY = "Built with Flutter by";
   static const String DAVID_COBBINA = "David Cobbina";
   static const String DESIGNED_BY = "Built by";
   static const String ADEEL_RAZA = "Adeel Raza";

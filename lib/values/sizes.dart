@@ -188,6 +188,7 @@ class Sizes {
   static const double PADDING_0 = 0.0;
 
   //Radius
+  static const double RADIUS_150 = 150.0;
   static const double RADIUS_140 = 140.0;
   static const double RADIUS_100 = 100.0;
   static const double RADIUS_80 = 80.0;

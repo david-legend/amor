@@ -24,6 +24,7 @@ class HeaderSectionWeb extends StatelessWidget {
           ContentArea(
             width: contentAreaWidth,
             height: contentAreaHeight,
+            backgroundColor: AppColors.offWhite,
             child: Padding(
               padding: EdgeInsets.only(left: sidePadding),
               child: Column(

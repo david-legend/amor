@@ -13,28 +13,33 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        padding: EdgeInsets.zero,
+      body: Column(
         children: [
           NavSection(),
-          SizedBox(
-            height: 1.0,
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                HeaderSection(),
+                SpaceH24(),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
+                  child: AboutSection(),
+                ),
+                SpaceH24(),
+                Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
+                  child: EducationSection(),
+                ),
+                SpaceH24(),
+                ExperienceSection(),
+                SkillsSection(),
+                FooterSection(),
+              ],
+            ),
           ),
-          HeaderSection(),
-          SpaceH24(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
-            child: AboutSection(),
-          ),
-          SpaceH24(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: Sizes.PADDING_20),
-            child: EducationSection(),
-          ),
-          SpaceH24(),
-          ExperienceSection(),
-          SkillsSection(),
-          FooterSection(),
         ],
       ),
     );

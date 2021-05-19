@@ -4,7 +4,15 @@ class StringConst {
   //strings
   static const String APP_NAME = "Amor";
 
-  //Home Section
+  //Nav Section
+  static const String NAME_ABBREV = "JM";
+  static const String HOME = "Home";
+  static const String ABOUT = "About";
+  static const String RESUME = "Resume";
+  static const String SKILLS = "Skills";
+  static const String CONTACT = "Contact Me";
+
+  //Header Section
   static const String INTRO = "Hello! I'm";
   static const String NAME = "James Martin";
   static const String PROFESSIONAL_POSITION =
@@ -19,7 +27,6 @@ class StringConst {
       '''I am a versatile, enthusiastic and passionate UI/UX Designer with a solid background in Human-Centered Design to be integrated in User Experiences. Aims to have compelling opportunities to leverage and extend my skills.\nI have learned and honed valuable collaboration and team management skills that have allowed me to both manage and work constructively and inventively in group-based environment''';
 
   //Education Section
-  static const String RESUME = "Resume";
   static const String MY = "My";
 
   static const String EDUCATION = "Education";
@@ -87,7 +94,6 @@ class StringConst {
 
   //Skills Section
   static const String MY_CODING = "My Coding";
-  static const String SKILLS = "Skills";
 
   static const String FLUTTER = "Flutter";
   static const String JAVA = "Java";

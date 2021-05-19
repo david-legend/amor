@@ -4,6 +4,16 @@ import 'package:amor/presentation/widgets/skill_progress_painter.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 
+class SkillData {
+  SkillData({
+    required this.skillName,
+    required this.skillLevel,
+  });
+
+  final String skillName;
+  final double skillLevel;
+}
+
 class SkillLevel extends StatelessWidget {
   SkillLevel({
     required this.skillLevel,

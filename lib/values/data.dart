@@ -1,33 +1,5 @@
 part of values;
 
-class ExperienceData {
-  ExperienceData({
-    required this.title,
-    required this.titleUrl,
-    required this.subtitle,
-    required this.body,
-    required this.location,
-    required this.duration,
-  });
-
-  final String title;
-  final String titleUrl;
-  final String location;
-  final String duration;
-  final String subtitle;
-  final List<String> body;
-}
-
-class SkillData {
-  SkillData({
-    required this.skillName,
-    required this.skillLevel,
-  });
-
-  final String skillName;
-  final double skillLevel;
-}
-
 class Data {
   static List<ExperienceData> experienceData = [
     ExperienceData(

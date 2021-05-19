@@ -7,6 +7,24 @@ import 'package:amor/presentation/widgets/spaces.dart';
 
 import 'experience_section.dart';
 
+class ExperienceData {
+  ExperienceData({
+    required this.title,
+    required this.titleUrl,
+    required this.subtitle,
+    required this.body,
+    required this.location,
+    required this.duration,
+  });
+
+  final String title;
+  final String titleUrl;
+  final String location;
+  final String duration;
+  final String subtitle;
+  final List<String> body;
+}
+
 class ExperienceTree extends StatelessWidget {
   ExperienceTree({
     required this.experienceData,

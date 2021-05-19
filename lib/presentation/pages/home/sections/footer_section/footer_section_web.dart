@@ -18,10 +18,8 @@ class FooterSectionWeb extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
+    double sidePadding = screenWidth / Sizes.DIVISIONS;
     double footerHeight = screenHeight * 0.2;
-    double circleWidth = screenWidth * 0.1;
-    double lgOffsetDx = lgCircleRadius;
-    double lgOffsetDy = screenHeight * 0.7;
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? footerTextStyle = textTheme.bodyText1?.copyWith(
       fontSize: Sizes.TEXT_SIZE_12,
@@ -36,9 +34,9 @@ class FooterSectionWeb extends StatelessWidget {
     return Container(
       width: screenWidth,
       height: footerHeight,
-      padding: const EdgeInsets.only(
-        left: Sizes.PADDING_40,
-        right: Sizes.PADDING_40,
+      padding: EdgeInsets.only(
+        left: sidePadding,
+        right: sidePadding,
         bottom: Sizes.PADDING_24,
       ),
       color: AppColors.purple500,

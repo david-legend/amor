@@ -17,7 +17,6 @@ class HeaderSectionWeb extends StatelessWidget {
     double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     double contentAreaWidth = assignWidth(context, 0.5);
     double contentAreaHeight = assignHeight(context, 0.7);
-    double circleWidth = contentAreaWidth * 0.1;
 
     return Container(
       child: Row(
@@ -25,19 +24,21 @@ class HeaderSectionWeb extends StatelessWidget {
           ContentArea(
             width: contentAreaWidth,
             height: contentAreaHeight,
-            backgroundColor: AppColors.offWhite,
             child: Padding(
               padding: EdgeInsets.only(left: sidePadding),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  _drawCircle(
-                    width: circleWidth,
-                    height: circleWidth,
-                    offsetDx: contentAreaWidth * 0.4,
-                    offsetDy: contentAreaHeight * 0.0,
+                  CustomPaint(
+                    painter: Circle(
+                      offset: Offset(
+                          contentAreaWidth * 0.4, contentAreaWidth * 0.0),
+                      radius: Sizes.RADIUS_20,
+                      color: AppColors.accentColor,
+                    ),
                   ),
+                  SpaceH30(),
                   Text(
                     StringConst.INTRO,
                     style: textTheme.bodyText2?.copyWith(
@@ -70,12 +71,12 @@ class HeaderSectionWeb extends StatelessWidget {
                     ],
                     spacing: kSpacing20,
                   ),
-                  _drawCircle(
-                    width: circleWidth,
-                    height: circleWidth,
-                    offsetDx: contentAreaWidth * 0.0,
-                    offsetDy: contentAreaHeight * 0.15,
-                    radius: Sizes.RADIUS_40,
+                  CustomPaint(
+                    painter: Circle(
+                      offset: Offset(Sizes.RADIUS_40, contentAreaHeight * 0.15),
+                      radius: Sizes.RADIUS_40,
+                      color: AppColors.accentColor,
+                    ),
                   ),
                 ],
               ),
@@ -89,21 +90,23 @@ class HeaderSectionWeb extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: kPadding24),
               child: Stack(
                 children: [
-                  _drawCircle(
-                    width: circleWidth,
-                    height: circleWidth,
-                    offsetDx: contentAreaWidth * 0.825,
-                    offsetDy: contentAreaHeight * 0.35,
-                    color: AppColors.purple100,
-                    radius: Sizes.RADIUS_140,
+                  CustomPaint(
+                    painter: Circle(
+                      offset: Offset(
+                          contentAreaWidth * 0.825, contentAreaHeight * 0.35),
+                      color: AppColors.purple100,
+                      radius: Sizes.RADIUS_140,
+                    ),
                   ),
-                  _drawCircle(
-                    width: circleWidth,
-                    height: circleWidth,
-                    offsetDx: contentAreaWidth * 0.1,
-                    offsetDy: contentAreaHeight * 0.9,
-                    color: AppColors.purple100,
-                    radius: Sizes.RADIUS_40,
+                  CustomPaint(
+                    painter: Circle(
+                      offset: Offset(
+                        contentAreaWidth * 0.1,
+                        contentAreaHeight * 0.9,
+                      ),
+                      color: AppColors.purple100,
+                      radius: Sizes.RADIUS_40,
+                    ),
                   ),
                   Center(
                     child: Row(
@@ -131,30 +134,6 @@ class HeaderSectionWeb extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-
-  Widget _drawCircle({
-    required double width,
-    required double height,
-    required double offsetDx,
-    required double offsetDy,
-    double radius = Sizes.RADIUS_20,
-    Color color = AppColors.accentColor,
-  }) {
-    return Container(
-      height: width,
-      width: height,
-      child: Opacity(
-        opacity: 0.9,
-        child: CustomPaint(
-          painter: Circle(
-            offset: Offset(offsetDx, offsetDy),
-            radius: radius,
-            color: color,
-          ),
-        ),
       ),
     );
   }

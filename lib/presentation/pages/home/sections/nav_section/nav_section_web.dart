@@ -22,6 +22,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     double screenWidth = widthOfScreen(context);
     double contentAreaWidth = screenWidth * 0.5;
 
@@ -46,7 +47,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
               backgroundColor: AppColors.white,
               child: Row(
                 children: [
-                  SpaceW60(),
+                  SizedBox(width: sidePadding),
                   Text(
                     StringConst.NAME_ABBREV,
                     style: textTheme.headline3,

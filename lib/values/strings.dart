@@ -9,7 +9,7 @@ class StringConst {
   static const String HOME = "Home";
   static const String ABOUT = "About";
   static const String RESUME = "Resume";
-  static const String SKILLS = "Skills";
+  static const String SKILLS_AND_CERTIFICATION = "Skills & Certifications";
   static const String CONTACT = "Contact Me";
 
   //Header Section
@@ -101,18 +101,18 @@ class StringConst {
 
   //Skills Section
   static const String MY_CODING = "My Coding";
+  static const String SKILLS = "Skills";
+  static const String CERTIFICATIONS = "Certifications";
 
-  static const String FLUTTER = "Flutter";
+  static const String PYTHON = "Python";
   static const String JAVA = "Java";
-  static const String ANDROID = "Android";
-  static const String KOTLIN = "Kotlin";
+  static const String C_PLUS_PLUS = "C++";
   static const String JAVASCRIPT = "Javascript";
-  static const String PHP = "PHP";
-  static const String LARAVEL = "Laravel";
-  static const String SQL = "SQL";
-  static const String WORDPRESS = "Wordpress";
-  static const String BOOTSTRAP = "Bootstrap";
-  static const String HTML_CSS = "HTML/CSS";
+  static const String HTML = "HTML";
+  static const String CSS = "CSS";
+
+  static const IOT_CERT = "IOT Certification";
+  static const GOOGLE = "Google";
 
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";

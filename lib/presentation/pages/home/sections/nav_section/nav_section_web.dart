@@ -15,7 +15,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
     NavItemState(name: StringConst.HOME, isSelected: true),
     NavItemState(name: StringConst.ABOUT),
     NavItemState(name: StringConst.RESUME),
-    NavItemState(name: StringConst.SKILLS),
+    NavItemState(name: StringConst.SKILLS_AND_CERTIFICATION),
     NavItemState(name: StringConst.CONTACT),
   ];
 

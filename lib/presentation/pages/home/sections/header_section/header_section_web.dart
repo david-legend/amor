@@ -123,7 +123,7 @@ class HeaderSectionWeb extends StatelessWidget {
                           ),
                         ),
                         Image.asset(
-                          ImagePath.sample_1,
+                          ImagePath.sample_4,
                           width: (contentAreaWidth * 0.5) - kPadding24,
                           fit: BoxFit.scaleDown,
                         ),

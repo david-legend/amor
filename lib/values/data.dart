@@ -41,16 +41,20 @@ class Data {
   ];
 
   static List<SkillData> skillData = [
-    SkillData(skillLevel: 95, skillName: StringConst.FLUTTER),
+    SkillData(skillLevel: 95, skillName: StringConst.PYTHON),
     SkillData(skillLevel: 70, skillName: StringConst.JAVA),
-    SkillData(skillLevel: 78, skillName: StringConst.ANDROID),
-    SkillData(skillLevel: 70, skillName: StringConst.KOTLIN),
+    SkillData(skillLevel: 78, skillName: StringConst.C_PLUS_PLUS),
     SkillData(skillLevel: 80, skillName: StringConst.JAVASCRIPT),
-    SkillData(skillLevel: 80, skillName: StringConst.PHP),
-    SkillData(skillLevel: 80, skillName: StringConst.LARAVEL),
-    SkillData(skillLevel: 80, skillName: StringConst.SQL),
-    SkillData(skillLevel: 90, skillName: StringConst.WORDPRESS),
-    SkillData(skillLevel: 80, skillName: StringConst.BOOTSTRAP),
-    SkillData(skillLevel: 80, skillName: StringConst.HTML_CSS),
+    SkillData(skillLevel: 70, skillName: StringConst.HTML),
+    SkillData(skillLevel: 80, skillName: StringConst.CSS),
+  ];
+  static List<CertificationData> certificationData = [
+    CertificationData(
+      title: StringConst.IOT_CERT,
+      url: " ",
+      image: ImagePath.IOT_CERT,
+      imageSize: 0.30,
+      awardedBy: StringConst.GOOGLE,
+    )
   ];
 }

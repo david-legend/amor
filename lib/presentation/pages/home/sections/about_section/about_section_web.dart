@@ -41,6 +41,9 @@ class _AboutSectionWebState extends State<AboutSectionWeb> {
     }
   }
 
+//  @override
+//  void didChangeDependencies() { }
+
   _getHeightOfAboutContainer() {
     final RenderBox sectionTitleRenderBox =
         sectionTitleKey.currentContext?.findRenderObject() as RenderBox;

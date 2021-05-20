@@ -7,6 +7,7 @@ enum DisplayType {
 
 const _desktopPortraitBreakpoint = 700.0;
 const _desktopLandscapeBreakpoint = 1000.0;
+const _ipadProBreakpoint = 1000.0;
 
 /// Returns the [DisplayType] for the current screen. This app only supports
 /// mobile and desktop layouts, and as such we only have one breakpoint.
@@ -35,6 +36,12 @@ bool isDisplayDesktop(BuildContext context) {
 bool isDisplaySmallDesktop(BuildContext context) {
   return isDisplayDesktop(context) &&
       MediaQuery.of(context).size.width < _desktopLandscapeBreakpoint;
+}
+
+bool isDisplaySmallDesktopOrIpadPro(BuildContext context) {
+  return isDisplaySmallDesktop(context) ||
+      (MediaQuery.of(context).size.width > _ipadProBreakpoint &&
+          MediaQuery.of(context).size.width < 1170);
 }
 
 double widthOfScreen(BuildContext context) {

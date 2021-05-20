@@ -1,5 +1,6 @@
 library values;
 
+import 'package:amor/presentation/widgets/certification_card.dart';
 import 'package:amor/presentation/widgets/experience_tree.dart';
 import 'package:amor/presentation/widgets/skill_level.dart';
 import 'package:flutter/material.dart';

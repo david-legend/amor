@@ -18,9 +18,8 @@ class SkillLevel extends StatelessWidget {
   SkillLevel({
     required this.skillLevel,
     required this.skillName,
-    this.width = 100,
-    this.circleWidth = 80, //Sizes.WIDTH_60,
-    this.circleHeight = 80, //Sizes.HEIGHT_60,
+    this.width = 120,
+    this.height = 120,
     this.skillLevelStyle,
     this.skillNameTextStyle,
     this.duration = const Duration(milliseconds: 500),
@@ -33,8 +32,7 @@ class SkillLevel extends StatelessWidget {
   final TextStyle? skillLevelStyle;
   final TextStyle? skillNameTextStyle;
   final double width;
-  final double circleWidth;
-  final double circleHeight;
+  final double height;
   final Duration duration;
   final Color progressColor;
   final Color baseColor;
@@ -45,22 +43,20 @@ class SkillLevel extends StatelessWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
 
     return Container(
-      width: width,
-      height: 100,
       child: Column(
         children: [
           TweenAnimationBuilder(
             tween: Tween<double>(begin: 0, end: skillLevel),
             duration: duration,
             child: Container(
-              width: circleWidth,
-              height: circleHeight,
+              width: width,
+              height: height,
               child: Center(
                 child: Text(
                   "$actualSkillLevel%",
                   style: skillLevelStyle ??
                       textTheme.subtitle1?.copyWith(
-                        color: AppColors.purple50,
+                        color: AppColors.purple500,
                       ),
                 ),
               ),
@@ -77,22 +73,21 @@ class SkillLevel extends StatelessWidget {
                   progressArcColor: progressColor,
                 ),
                 child: AnimatedOpacity(
-                  opacity: value / 100,
+                  opacity: 1,
                   duration: duration,
                   child: child,
                 ),
               );
             },
           ),
-          SpaceW8(),
-          Expanded(
-            child: Text(
-              skillName,
-              style: skillNameTextStyle ??
-                  textTheme.subtitle2?.copyWith(
-                    color: AppColors.darkGrey600,
-                  ),
-            ),
+          SpaceH8(),
+          Text(
+            skillName,
+            style: skillNameTextStyle ??
+                textTheme.subtitle2?.copyWith(
+                  fontSize: Sizes.TEXT_SIZE_16,
+                  color: AppColors.darkGrey600,
+                ),
           ),
         ],
       ),

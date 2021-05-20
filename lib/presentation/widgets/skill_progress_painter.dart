@@ -6,8 +6,8 @@ import 'package:amor/values/values.dart';
 class SkillProgressPainter extends CustomPainter {
   SkillProgressPainter({
     required this.currentProgress,
-    this.circleStrokeWidth = Sizes.SIZE_5,
-    this.progressArcStrokeWidth = Sizes.SIZE_5,
+    this.circleStrokeWidth = Sizes.SIZE_10,
+    this.progressArcStrokeWidth = Sizes.SIZE_10,
     this.circleColor = const Color(0xFFB5B8BC),
     this.progressArcColor = const Color(0xFF303E48),
   });
@@ -30,18 +30,26 @@ class SkillProgressPainter extends CustomPainter {
       ..strokeWidth = progressArcStrokeWidth
       ..color = progressArcColor
       ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round;
+      ..strokeCap = StrokeCap.square;
 
     Offset center = Offset(size.width / 2, size.height / 2);
     double radius = min(size.width / 2, size.height / 2) - 10;
 
     canvas.drawCircle(
-        center, radius, innerCircle); // this draws main outer circle
+      center,
+      radius,
+      innerCircle,
+    ); // this draws main outer circle
 
     double angle = 2 * pi * (currentProgress / 100);
 
-    canvas.drawArc(Rect.fromCircle(center: center, radius: radius), -pi / 2,
-        angle, false, completeArc);
+    canvas.drawArc(
+      Rect.fromCircle(center: center, radius: radius),
+      -pi / 2,
+      angle,
+      false,
+      completeArc,
+    );
   }
 
   @override

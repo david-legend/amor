@@ -4,6 +4,7 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:amor/utils/functions.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'experience_section.dart';
 
@@ -413,18 +414,17 @@ class RightLeaf extends StatelessWidget {
             child: Text(
               title,
               style: titleTextStyle ??
-                  textTheme.subtitle1?.copyWith(
+                  Styles.customTextStyle(
                     fontSize: Sizes.TEXT_SIZE_18,
-                    color: AppColors.darkGrey800,
+                    fontStyle: FontStyle.normal,
                   ),
             ),
           ),
           Text(
             subtitle,
             style: subtitleTextStyle ??
-                textTheme.subtitle2?.copyWith(
+                Styles.customTextStyle(
                   fontStyle: FontStyle.italic,
-                  color: AppColors.darkGrey800,
                 ),
           ),
           SpaceH8(),

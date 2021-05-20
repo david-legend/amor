@@ -70,11 +70,12 @@ class ExperienceSectionWeb extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
                 leftLeafIconColor: AppColors.darkGrey400,
-                rightLeafTitleStyle: textTheme.subtitle1?.copyWith(
-                  fontSize: Sizes.TEXT_SIZE_18,
+                rightLeafTitleStyle: Styles.customTextStyle(
                   color: AppColors.accentColor300,
+                  fontSize: Sizes.TEXT_SIZE_18,
+                  fontStyle: FontStyle.normal,
                 ),
-                rightLeafSubtitleStyle: textTheme.subtitle2?.copyWith(
+                rightLeafSubtitleStyle: Styles.customTextStyle(
                   fontStyle: FontStyle.italic,
                   color: AppColors.accentColor300,
                 ),

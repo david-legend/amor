@@ -115,25 +115,27 @@ class HeaderSectionWeb extends StatelessWidget {
                       radius: Sizes.RADIUS_40,
                     ),
                   ),
-                  Row(
-                    children: [
-                      SizedBox(
-                        width: (contentAreaWidth * 0.5) - kPadding24,
-                        child: Text(
-                          StringConst.CATCH_LINE,
-                          style: textTheme.headline3?.copyWith(
-                            fontSize: Sizes.TEXT_SIZE_36,
-                            fontWeight: FontWeight.w100,
-                            color: AppColors.accentColor,
+                  Center(
+                    child: Row(
+                      children: [
+                        SizedBox(
+                          width: (contentAreaWidth * 0.5) - kPadding24,
+                          child: Text(
+                            StringConst.CATCH_LINE,
+                            style: textTheme.headline3?.copyWith(
+                              fontSize: Sizes.TEXT_SIZE_36,
+                              fontWeight: FontWeight.w100,
+                              color: AppColors.accentColor,
+                            ),
                           ),
                         ),
-                      ),
-                      Image.asset(
-                        ImagePath.sample_4,
-                        width: (contentAreaWidth * 0.5) - kPadding24,
-                        fit: BoxFit.scaleDown,
-                      ),
-                    ],
+                        Image.asset(
+                          ImagePath.sample_4,
+                          width: (contentAreaWidth * 0.5) - kPadding24,
+                          fit: BoxFit.scaleDown,
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),

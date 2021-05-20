@@ -84,9 +84,10 @@ class SkillLevel extends StatelessWidget {
           Text(
             skillName,
             style: skillNameTextStyle ??
-                textTheme.subtitle2?.copyWith(
+                Styles.customTextStyle(
                   fontSize: Sizes.TEXT_SIZE_16,
                   color: AppColors.darkGrey600,
+                  fontWeight: FontWeight.w400,
                 ),
           ),
         ],

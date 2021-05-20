@@ -78,7 +78,7 @@ class AppTheme {
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline6: GoogleFonts.lato(
+    headline6: GoogleFonts.merriweather(
       fontSize: Sizes.TEXT_SIZE_20,
       color: AppColors.primaryText,
       fontWeight: _bold,

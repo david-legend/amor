@@ -64,9 +64,10 @@ class _AboutSectionWebState extends State<AboutSectionWeb> {
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
     TextStyle? aboutMeTextStyle = textTheme.bodyText1?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_16,
+      fontSize: Sizes.TEXT_SIZE_18,
       color: AppColors.accentColor,
-      letterSpacing: 0.8,
+      fontWeight: FontWeight.w300,
+      letterSpacing: 0.1,
     );
 
     return Container(

@@ -6,6 +6,7 @@ import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 const kPadding24 = Sizes.PADDING_24;
 const kSpacing20 = Sizes.SIZE_20;
@@ -42,21 +43,26 @@ class HeaderSectionWeb extends StatelessWidget {
                   SpaceH30(),
                   Text(
                     StringConst.INTRO,
-                    style: textTheme.bodyText2?.copyWith(
+                    style: GoogleFonts.merriweather(
                       fontSize: Sizes.TEXT_SIZE_60,
+                      color: AppColors.primaryText,
+                      fontWeight: FontWeight.w100,
+                      fontStyle: FontStyle.normal,
                     ),
                   ),
                   Text(
                     StringConst.NAME,
-                    style: textTheme.subtitle1?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_60,
+                    style: textTheme.headline2?.copyWith(
                       color: AppColors.primaryColor,
                     ),
                   ),
                   SpaceH8(),
                   Text(
                     StringConst.PROFESSIONAL_POSITION,
-                    style: textTheme.subtitle1,
+                    style: textTheme.bodyText1?.copyWith(
+                      fontSize: Sizes.TEXT_SIZE_20,
+                      fontWeight: FontWeight.w300,
+                    ),
                   ),
                   SpaceH16(),
                   SocialIcons(
@@ -88,7 +94,7 @@ class HeaderSectionWeb extends StatelessWidget {
             height: contentAreaHeight,
             backgroundColor: AppColors.primaryColor,
             child: Container(
-              padding: EdgeInsets.symmetric(horizontal: kPadding24),
+              padding: EdgeInsets.only(left: Sizes.PADDING_40),
               child: Stack(
                 children: [
                   CustomPaint(
@@ -109,26 +115,25 @@ class HeaderSectionWeb extends StatelessWidget {
                       radius: Sizes.RADIUS_40,
                     ),
                   ),
-                  Center(
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: (contentAreaWidth * 0.5) - kPadding24,
-                          child: Text(
-                            StringConst.CATCH_LINE,
-                            style: textTheme.subtitle1?.copyWith(
-                              fontSize: Sizes.TEXT_SIZE_40,
-                              color: AppColors.accentColor,
-                            ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: (contentAreaWidth * 0.5) - kPadding24,
+                        child: Text(
+                          StringConst.CATCH_LINE,
+                          style: textTheme.headline3?.copyWith(
+                            fontSize: Sizes.TEXT_SIZE_36,
+                            fontWeight: FontWeight.w100,
+                            color: AppColors.accentColor,
                           ),
                         ),
-                        Image.asset(
-                          ImagePath.sample_4,
-                          width: (contentAreaWidth * 0.5) - kPadding24,
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ],
-                    ),
+                      ),
+                      Image.asset(
+                        ImagePath.sample_4,
+                        width: (contentAreaWidth * 0.5) - kPadding24,
+                        fit: BoxFit.scaleDown,
+                      ),
+                    ],
                   )
                 ],
               ),

@@ -1,6 +1,5 @@
 import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/widgets/certification_card.dart';
-import 'package:amor/presentation/widgets/section_title.dart';
 import 'package:amor/presentation/widgets/skill_level.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/presentation/widgets/sub_section_title.dart';
@@ -23,8 +22,6 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-//          SectionTitle(title: StringConst.SKILLS_AND_CERTIFICATION),
-//          SpaceH16(),
           SubSectionTitle(
             title: StringConst.MY_CODING,
             subtitle: StringConst.SKILLS,

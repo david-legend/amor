@@ -16,7 +16,7 @@ class SectionTitle extends StatelessWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Text(
       title,
-      style: titleStyle ?? textTheme.headline2,
+      style: titleStyle ?? textTheme.headline3,
     );
   }
 }

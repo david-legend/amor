@@ -54,13 +54,13 @@ class AppTheme {
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline2: GoogleFonts.lato(
+    headline2: GoogleFonts.merriweather(
       fontSize: Sizes.TEXT_SIZE_60,
       color: AppColors.primaryText,
       fontWeight: _bold,
       fontStyle: FontStyle.normal,
     ),
-    headline3: GoogleFonts.lato(
+    headline3: GoogleFonts.merriweather(
       fontSize: Sizes.TEXT_SIZE_48,
       color: AppColors.primaryText,
       fontWeight: _bold,

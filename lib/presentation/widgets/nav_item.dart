@@ -34,7 +34,7 @@ class NavItem extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        child: SelectableText(
+        child: Text(
           title,
           style: titleStyle ??
               textTheme.bodyText1?.copyWith(

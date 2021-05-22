@@ -77,7 +77,7 @@ class FooterSectionWeb extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  SelectableText(
                     StringConst.RIGHTS_RESERVED,
                     style: textTheme.bodyText1?.copyWith(
                       fontSize: Sizes.TEXT_SIZE_12,
@@ -122,7 +122,7 @@ class FooterSectionWeb extends StatelessWidget {
                   SpaceH2(),
                   Row(
                     children: [
-                      Text(
+                      SelectableText(
                         StringConst.MADE_IN_GHANA,
                         style: footerTextStyle,
                       ),
@@ -138,7 +138,7 @@ class FooterSectionWeb extends StatelessWidget {
                         ),
                       ),
                       SpaceW4(),
-                      Text(
+                      SelectableText(
                         " ${StringConst.WITH_LOVE}",
                         style: footerTextStyle,
                       ),

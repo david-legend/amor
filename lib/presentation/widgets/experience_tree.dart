@@ -411,7 +411,7 @@ class RightLeaf extends StatelessWidget {
         children: [
           InkWell(
             onTap: onTap,
-            child: SelectableText(
+            child: Text(
               title,
               style: titleTextStyle ??
                   Styles.customTextStyle(

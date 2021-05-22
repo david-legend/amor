@@ -32,11 +32,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
         decoration: BoxDecoration(
 //          color: Colors.white,
           boxShadow: [
-            BoxShadow(
-              color: Colors.grey,
-              offset: Offset(0.0, 1.0), //(x,y)
-              blurRadius: 1.0,
-            ),
+            Shadows.elevationShadow,
           ],
         ),
         child: Row(

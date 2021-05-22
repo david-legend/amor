@@ -74,6 +74,10 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
           onTap: () => openUrlLink(data[i].url),
           title: data[i].title,
           subtitle: data[i].awardedBy,
+          border: Border.all(
+            color: AppColors.purple50,
+            width: Sizes.WIDTH_2,
+          ),
           height: isDisplaySmallDesktopOrIpadPro(context)
               ? assignHeight(context, 0.3)
               : assignHeight(context, 0.45),

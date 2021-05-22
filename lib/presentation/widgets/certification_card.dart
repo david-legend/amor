@@ -33,6 +33,8 @@ class CertificationCard extends StatefulWidget {
     this.titleTextStyle,
     this.subtitleTextStyle,
     this.actionTitleTextStyle,
+    this.border,
+    this.boxShadow = const [Shadows.elevationShadow],
     this.duration = 1000,
     this.onTap,
   });
@@ -43,6 +45,8 @@ class CertificationCard extends StatefulWidget {
   final String title;
   final String subtitle;
   final String actionTitle;
+  final List<BoxShadow> boxShadow;
+  final BoxBorder? border;
   final Color hoverColor;
   final TextStyle? titleTextStyle;
   final TextStyle? subtitleTextStyle;
@@ -111,6 +115,10 @@ class _CertificationCardState extends State<CertificationCard>
       child: Container(
         width: widget.width,
         height: widget.height,
+        decoration: BoxDecoration(
+          boxShadow: widget.boxShadow,
+          border: widget.border,
+        ),
         child: MouseRegion(
           onEnter: (e) => _mouseEnter(true),
           onExit: (e) => _mouseEnter(false),

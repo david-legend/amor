@@ -41,7 +41,7 @@ class HeaderSectionWeb extends StatelessWidget {
                     ),
                   ),
                   SpaceH30(),
-                  Text(
+                  SelectableText(
                     StringConst.INTRO,
                     style: GoogleFonts.merriweather(
                       fontSize: Sizes.TEXT_SIZE_60,
@@ -50,14 +50,14 @@ class HeaderSectionWeb extends StatelessWidget {
                       fontStyle: FontStyle.normal,
                     ),
                   ),
-                  Text(
+                  SelectableText(
                     StringConst.NAME,
                     style: textTheme.headline2?.copyWith(
                       color: AppColors.primaryColor,
                     ),
                   ),
                   SpaceH8(),
-                  Text(
+                  SelectableText(
                     StringConst.PROFESSIONAL_POSITION,
                     style: textTheme.bodyText1?.copyWith(
                       fontSize: Sizes.TEXT_SIZE_20,
@@ -120,7 +120,7 @@ class HeaderSectionWeb extends StatelessWidget {
                       children: [
                         SizedBox(
                           width: (contentAreaWidth * 0.5) - kPadding24,
-                          child: Text(
+                          child: SelectableText(
                             StringConst.CATCH_LINE,
                             style: textTheme.headline3?.copyWith(
                               fontSize: Sizes.TEXT_SIZE_36,

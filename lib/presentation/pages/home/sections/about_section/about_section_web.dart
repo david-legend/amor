@@ -116,27 +116,27 @@ class _AboutSectionWebState extends State<AboutSectionWeb> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          SelectableText(
                             StringConst.ABOUT_ME_SUMMARY_1,
                             style: aboutMeTextStyle,
                           ),
                           SpaceH8(),
-                          Text(
+                          SelectableText(
                             StringConst.ABOUT_ME_SUMMARY_2,
                             style: aboutMeTextStyle,
                           ),
                           SpaceH8(),
-                          Text(
+                          SelectableText(
                             StringConst.ABOUT_ME_SUMMARY_3,
                             style: aboutMeTextStyle,
                           ),
                           SpaceH8(),
-                          Text(
+                          SelectableText(
                             StringConst.ABOUT_ME_SUMMARY_4,
                             style: aboutMeTextStyle,
                           ),
                           SpaceH8(),
-                          Text(
+                          SelectableText(
                             StringConst.ABOUT_ME_SUMMARY_5,
                             style: aboutMeTextStyle,
                           ),

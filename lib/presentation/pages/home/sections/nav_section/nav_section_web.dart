@@ -48,7 +48,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
               child: Row(
                 children: [
                   SizedBox(width: sidePadding),
-                  Text(
+                  SelectableText(
                     StringConst.NAME_ABBREV,
                     style: textTheme.headline3,
                   ),

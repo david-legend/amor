@@ -52,7 +52,7 @@ class SkillLevel extends StatelessWidget {
               width: width,
               height: height,
               child: Center(
-                child: Text(
+                child: SelectableText(
                   "$actualSkillLevel%",
                   style: skillLevelStyle ??
                       textTheme.subtitle1?.copyWith(
@@ -81,7 +81,7 @@ class SkillLevel extends StatelessWidget {
             },
           ),
           SpaceH8(),
-          Text(
+          SelectableText(
             skillName,
             style: skillNameTextStyle ??
                 Styles.customTextStyle(

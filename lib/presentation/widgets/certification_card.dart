@@ -132,7 +132,7 @@ class _CertificationCardState extends State<CertificationCard>
                         child: Column(
                           children: [
                             Spacer(flex: 1),
-                            Text(
+                            SelectableText(
                               widget.title,
                               textAlign: TextAlign.center,
                               style: widget.titleTextStyle ??
@@ -141,7 +141,7 @@ class _CertificationCardState extends State<CertificationCard>
                                   ),
                             ),
                             SpaceH4(),
-                            Text(
+                            SelectableText(
                               widget.subtitle,
                               textAlign: TextAlign.center,
                               style: widget.subtitleTextStyle ??
@@ -152,7 +152,7 @@ class _CertificationCardState extends State<CertificationCard>
                             ),
                             SpaceH16(),
                             widget.hasActionTitle
-                                ? Text(
+                                ? SelectableText(
                                     widget.actionTitle,
                                     textAlign: TextAlign.center,
                                     style: widget.actionTitleTextStyle ??

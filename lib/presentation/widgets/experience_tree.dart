@@ -89,7 +89,7 @@ class ExperienceTree extends StatelessWidget {
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
                 color: headBackgroundColor ?? AppColors.accentColor100,
               ),
-              child: Text(
+              child: SelectableText(
                 headTitle,
                 style: headTitleStyle ??
                     textTheme.subtitle1?.copyWith(
@@ -115,7 +115,7 @@ class ExperienceTree extends StatelessWidget {
                 borderRadius: BorderRadius.circular(Sizes.RADIUS_20),
                 color: tailBackgroundColor ?? AppColors.accentColor100,
               ),
-              child: Text(
+              child: SelectableText(
                 tailTitle,
                 style: tailTitleStyle ??
                     textTheme.subtitle1?.copyWith(
@@ -338,7 +338,7 @@ class LeftLeaf extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
+              SelectableText(
                 title,
                 style: titleTextStyle ??
                     textTheme.bodyText2?.copyWith(
@@ -360,7 +360,7 @@ class LeftLeaf extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text(
+              SelectableText(
                 subtitle,
                 style: subtitleTextStyle ??
                     textTheme.bodyText2?.copyWith(
@@ -411,7 +411,7 @@ class RightLeaf extends StatelessWidget {
         children: [
           InkWell(
             onTap: onTap,
-            child: Text(
+            child: SelectableText(
               title,
               style: titleTextStyle ??
                   Styles.customTextStyle(
@@ -420,7 +420,7 @@ class RightLeaf extends StatelessWidget {
                   ),
             ),
           ),
-          Text(
+          SelectableText(
             subtitle,
             style: subtitleTextStyle ??
                 Styles.customTextStyle(

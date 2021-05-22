@@ -14,7 +14,7 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    return Text(
+    return SelectableText(
       title,
       style: titleStyle ?? textTheme.headline3,
     );

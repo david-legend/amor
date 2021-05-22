@@ -40,7 +40,7 @@ class ExperienceSection extends StatelessWidget {
         children: [
           Row(
             children: [
-              Text(
+              SelectableText(
                 position,
                 style: positionTextStyle ??
                     textTheme.headline6?.copyWith(
@@ -50,7 +50,7 @@ class ExperienceSection extends StatelessWidget {
               SpaceW4(),
               InkWell(
                 onTap: onTap ?? () => openUrlLink(companyUrl),
-                child: Text(
+                child: SelectableText(
                   '@' + company,
                   style: companyTextStyle ??
                       textTheme.headline6?.copyWith(
@@ -60,7 +60,7 @@ class ExperienceSection extends StatelessWidget {
               )
             ],
           ),
-          Text(
+          SelectableText(
             location,
             style: locationTextStyle ??
                 textTheme.bodyText1?.copyWith(
@@ -69,7 +69,7 @@ class ExperienceSection extends StatelessWidget {
                 ),
           ),
           SpaceH4(),
-          Text(
+          SelectableText(
             duration,
             style: durationTextStyle ??
                 textTheme.bodyText1?.copyWith(
@@ -122,7 +122,7 @@ class Body extends StatelessWidget {
         ),
         SpaceW8(),
         Expanded(
-          child: Text(
+          child: SelectableText(
             body,
             style: bodyTextStyle ??
                 textTheme.bodyText1?.copyWith(

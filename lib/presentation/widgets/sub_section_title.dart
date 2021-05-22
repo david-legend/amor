@@ -27,7 +27,7 @@ class SubSectionTitle extends StatelessWidget {
     return Column(
       crossAxisAlignment: crossAxisAlignment,
       children: [
-        Text(
+        SelectableText(
           title,
           style: titleStyle ??
               textTheme.subtitle2?.copyWith(
@@ -36,7 +36,7 @@ class SubSectionTitle extends StatelessWidget {
               ),
         ),
         SpaceH4(),
-        Text(
+        SelectableText(
           subtitle,
           style: subtitleStyle ??
               textTheme.headline6?.copyWith(

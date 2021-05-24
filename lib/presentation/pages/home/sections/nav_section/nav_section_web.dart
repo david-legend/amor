@@ -5,19 +5,26 @@ import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
+const kDuration = Duration(milliseconds: 600);
+
 class NavSectionWeb extends StatefulWidget {
+  final List<NavItemData> navItems;
+
+  NavSectionWeb({required this.navItems});
+
   @override
   _NavSectionWebState createState() => _NavSectionWebState();
 }
 
 class _NavSectionWebState extends State<NavSectionWeb> {
-  List<NavItemState> navItems = [
-    NavItemState(name: StringConst.HOME, isSelected: true),
-    NavItemState(name: StringConst.ABOUT),
-    NavItemState(name: StringConst.RESUME),
-    NavItemState(name: StringConst.SKILLS_AND_CERTIFICATION),
-    NavItemState(name: StringConst.CONTACT),
-  ];
+//  final headerSectionKey = new GlobalKey();
+//  List<NavItemData> navItems = [
+//    NavItemData(name: StringConst.HOME, isSelected: true),
+//    NavItemData(name: StringConst.ABOUT),
+//    NavItemData(name: StringConst.RESUME),
+//    NavItemData(name: StringConst.SKILLS_AND_CERTIFICATION),
+//    NavItemData(name: StringConst.CONTACT),
+//  ];
 
   @override
   Widget build(BuildContext context) {
@@ -50,19 +57,25 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                   ),
                   Spacer(),
                   NavItem(
-                    title: navItems[0].name,
-                    isSelected: navItems[0].isSelected,
+                    title: widget.navItems[0].name,
+                    isSelected: widget.navItems[0].isSelected,
                     textColor: AppColors.darkGrey800,
                     selectedColor: AppColors.deepBlue,
-                    onTap: () => _onTapNavItem(navItems[0].name),
+                    onTap: () => _onTapNavItem(
+                      context: widget.navItems[0].key,
+                      navItemName: widget.navItems[0].name,
+                    ),
                   ),
                   SpaceW40(),
                   NavItem(
-                    title: navItems[1].name,
-                    isSelected: navItems[1].isSelected,
+                    title: widget.navItems[1].name,
+                    isSelected: widget.navItems[1].isSelected,
                     selectedColor: AppColors.deepBlue,
                     textColor: AppColors.darkGrey800,
-                    onTap: () => _onTapNavItem(navItems[1].name),
+                    onTap: () => _onTapNavItem(
+                      context: widget.navItems[1].key,
+                      navItemName: widget.navItems[1].name,
+                    ),
                   ),
                   SpaceW20(),
                 ],
@@ -76,21 +89,27 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                 children: [
                   SpaceW20(),
                   NavItem(
-                    title: navItems[2].name,
-                    isSelected: navItems[2].isSelected,
-                    onTap: () => _onTapNavItem(navItems[2].name),
+                    title: widget.navItems[2].name,
+                    isSelected: widget.navItems[2].isSelected,
+                    onTap: () => _onTapNavItem(
+                      context: widget.navItems[2].key,
+                      navItemName: widget.navItems[2].name,
+                    ),
                   ),
                   SpaceW40(),
                   NavItem(
-                    title: navItems[3].name,
-                    isSelected: navItems[3].isSelected,
-                    onTap: () => _onTapNavItem(navItems[3].name),
+                    title: widget.navItems[3].name,
+                    isSelected: widget.navItems[3].isSelected,
+                    onTap: () => _onTapNavItem(
+                      context: widget.navItems[3].key,
+                      navItemName: widget.navItems[3].name,
+                    ),
                   ),
                   SpaceW40(),
                   NavItem(
-                    title: navItems[4].name,
-                    isSelected: navItems[4].isSelected,
-                    onTap: () => _onTapNavItem(navItems[4].name),
+                    title: widget.navItems[4].name,
+                    isSelected: widget.navItems[4].isSelected,
+                    onTap: () {},
                   ),
                 ],
               ),
@@ -101,15 +120,26 @@ class _NavSectionWebState extends State<NavSectionWeb> {
     );
   }
 
-  _onTapNavItem(String navItemName) {
-    for (int index = 0; index < navItems.length; index++) {
-      if (navItemName == navItems[index].name) {
+  _onTapNavItem({
+    required GlobalKey context,
+    required String navItemName,
+  }) {
+    for (int index = 0; index < widget.navItems.length; index++) {
+      if (navItemName == widget.navItems[index].name) {
+        scrollToSection(context.currentContext!);
         setState(() {
-          navItems[index].isSelected = true;
+          widget.navItems[index].isSelected = true;
         });
       } else {
-        navItems[index].isSelected = false;
+        widget.navItems[index].isSelected = false;
       }
     }
+  }
+
+  scrollToSection(BuildContext context) {
+    Scrollable.ensureVisible(
+      context,
+      duration: kDuration,
+    );
   }
 }

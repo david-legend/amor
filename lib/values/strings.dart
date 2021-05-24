@@ -14,7 +14,8 @@ class StringConst {
 
   //Header Section
   static const String INTRO = "Hello! I'm";
-  static const String NAME = "James Martin";
+//  static const String NAME = "James Martin";
+  static const String NAME = "Janet Mutesi";
   static const String PROFESSIONAL_POSITION =
       "Senior UX/UI Designer & Developer";
   static const String CATCH_LINE = "Meeting your digital product needs";

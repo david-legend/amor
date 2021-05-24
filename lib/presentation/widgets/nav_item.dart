@@ -1,12 +1,14 @@
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
-class NavItemState {
+class NavItemData {
   final String name;
+  final GlobalKey key;
   bool isSelected;
 
-  NavItemState({
+  NavItemData({
     required this.name,
+    required this.key,
     this.isSelected = false,
   });
 }

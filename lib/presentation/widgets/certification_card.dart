@@ -1,8 +1,10 @@
+import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:flutter/material.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 
 import 'package:amor/presentation/widgets/horizontal_bar.dart';
 import 'package:amor/values/values.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class CertificationData {
   CertificationData({
@@ -145,6 +147,10 @@ class _CertificationCardState extends State<CertificationCard>
                               textAlign: TextAlign.center,
                               style: widget.titleTextStyle ??
                                   textTheme.headline4?.copyWith(
+                                    fontSize: widthOfScreen(context) >
+                                            RefinedBreakpoints().mobileLarge
+                                        ? Sizes.TEXT_SIZE_34
+                                        : Sizes.TEXT_SIZE_20,
                                     color: AppColors.white,
                                   ),
                             ),

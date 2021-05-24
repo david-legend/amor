@@ -54,7 +54,7 @@ class Data {
       url: " ",
       image: ImagePath.IOT_CERT,
       imageSize: 0.30,
-      awardedBy: StringConst.GOOGLE,
+      awardedBy: StringConst.RISA,
     )
   ];
 }

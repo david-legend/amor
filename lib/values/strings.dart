@@ -115,7 +115,7 @@ class StringConst {
   static const String CSS = "CSS";
 
   static const IOT_CERT = "IOT Certification";
-  static const GOOGLE = "Google";
+  static const RISA = "RISA";
 
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";

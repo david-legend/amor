@@ -5,6 +5,7 @@ import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 const kDuration = Duration(milliseconds: 600);
 
@@ -98,14 +99,41 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                     ),
                   ),
                   SpaceW40(),
-                  NavItem(
-                    title: widget.navItems[3].name,
-                    isSelected: widget.navItems[3].isSelected,
-                    onTap: () => _onTapNavItem(
-                      context: widget.navItems[3].key,
-                      navItemName: widget.navItems[3].name,
-                    ),
+                  ResponsiveBuilder(
+                    refinedBreakpoints: RefinedBreakpoints(),
+                    builder: (context, sizingInformation) {
+                      if (sizingInformation.screenSize.width >=
+                              RefinedBreakpoints().tabletSmall &&
+                          sizingInformation.screenSize.width <
+                              RefinedBreakpoints().tabletNormal) {
+                        return NavItem(
+                          title: StringConst.SKILLS,
+                          isSelected: widget.navItems[3].isSelected,
+                          onTap: () => _onTapNavItem(
+                            context: widget.navItems[3].key,
+                            navItemName: widget.navItems[3].name,
+                          ),
+                        );
+                      } else {
+                        return NavItem(
+                          title: widget.navItems[3].name,
+                          isSelected: widget.navItems[3].isSelected,
+                          onTap: () => _onTapNavItem(
+                            context: widget.navItems[3].key,
+                            navItemName: widget.navItems[3].name,
+                          ),
+                        );
+                      }
+                    },
                   ),
+//                  NavItem(
+//                    title: widget.navItems[3].name,
+//                    isSelected: widget.navItems[3].isSelected,
+//                    onTap: () => _onTapNavItem(
+//                      context: widget.navItems[3].key,
+//                      navItemName: widget.navItems[3].name,
+//                    ),
+//                  ),
                   SpaceW40(),
                   NavItem(
                     title: widget.navItems[4].name,

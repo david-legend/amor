@@ -16,6 +16,7 @@ class AmorApp extends StatelessWidget {
     return MaterialApp.router(
       title: StringConst.APP_NAME,
       theme: AppTheme.lightThemeData,
+      debugShowCheckedModeBanner: false,
       routerDelegate: _appRouter.delegate(),
       routeInformationParser: _appRouter.defaultRouteParser(),
     );

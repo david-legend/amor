@@ -2,6 +2,7 @@ import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/widgets/content_area.dart';
 import 'package:amor/presentation/widgets/nav_item.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
+import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -109,7 +110,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                   NavItem(
                     title: widget.navItems[4].name,
                     isSelected: widget.navItems[4].isSelected,
-                    onTap: () {},
+                    onTap: () => openUrlLink(StringConst.EMAIL_URL),
                   ),
                 ],
               ),

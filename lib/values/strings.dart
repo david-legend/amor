@@ -19,6 +19,8 @@ class StringConst {
   static const String PROFESSIONAL_POSITION =
       "Senior UX/UI Designer & Developer";
   static const String CATCH_LINE = "Meeting your digital product needs";
+  static const String EMAIL = "mutesij97@gmail.com";
+  static const String EMAIL_URL = "mailto:<$EMAIL>?subject=&body=";
 
   //About Section
   static const String ABOUT_ME = "About Me";

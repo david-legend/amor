@@ -94,7 +94,7 @@ class ExperienceTree extends StatelessWidget {
                 style: headTitleStyle ??
                     textTheme.subtitle1?.copyWith(
                       color: AppColors.purple50,
-                      fontSize: Sizes.textSize_16,
+                      fontSize: Sizes.TEXT_SIZE_16,
                     ),
               ),
             ),
@@ -120,7 +120,7 @@ class ExperienceTree extends StatelessWidget {
                 style: tailTitleStyle ??
                     textTheme.subtitle1?.copyWith(
                       color: AppColors.purple50,
-                      fontSize: Sizes.textSize_16,
+                      fontSize: Sizes.TEXT_SIZE_16,
                     ),
               ),
             ),
@@ -343,7 +343,7 @@ class LeftLeaf extends StatelessWidget {
                 style: titleTextStyle ??
                     textTheme.bodyText2?.copyWith(
                       color: AppColors.darkGrey100,
-                      fontSize: Sizes.textSize_12,
+                      fontSize: Sizes.TEXT_SIZE_12,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -415,7 +415,7 @@ class RightLeaf extends StatelessWidget {
               title,
               style: titleTextStyle ??
                   Styles.customTextStyle(
-                    fontSize: Sizes.textSize_18,
+                    fontSize: Sizes.TEXT_SIZE_18,
                     fontStyle: FontStyle.normal,
                   ),
             ),

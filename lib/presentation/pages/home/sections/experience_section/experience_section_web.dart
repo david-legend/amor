@@ -23,7 +23,7 @@ class ExperienceSectionWeb extends StatelessWidget {
     double lgOffsetDy = screenHeight * 0.7;
     TextStyle? experienceTreeHeadStyle = textTheme.subtitle1?.copyWith(
       color: AppColors.accentColor50,
-      fontSize: Sizes.textSize_16,
+      fontSize: Sizes.TEXT_SIZE_16,
     );
     return Container(
       color: AppColors.darkBlue,
@@ -61,7 +61,7 @@ class ExperienceSectionWeb extends StatelessWidget {
                 headTitleStyle: experienceTreeHeadStyle,
                 tailTitleStyle: experienceTreeHeadStyle,
                 leftLeafTitleStyle: textTheme.bodyText2?.copyWith(
-                  fontSize: Sizes.textSize_12,
+                  fontSize: Sizes.TEXT_SIZE_12,
                   color: AppColors.darkGrey400,
                   fontWeight: FontWeight.bold,
                 ),
@@ -72,7 +72,7 @@ class ExperienceSectionWeb extends StatelessWidget {
                 leftLeafIconColor: AppColors.darkGrey400,
                 rightLeafTitleStyle: Styles.customTextStyle(
                   color: AppColors.accentColor300,
-                  fontSize: Sizes.textSize_18,
+                  fontSize: Sizes.TEXT_SIZE_18,
                   fontStyle: FontStyle.normal,
                 ),
                 rightLeafSubtitleStyle: Styles.customTextStyle(

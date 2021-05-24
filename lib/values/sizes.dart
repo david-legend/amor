@@ -26,27 +26,27 @@ class Sizes {
   static const double SIZE_0 = 0.0;
 
   //TextSizes
-  static double textSize_96 = 96.0;
-  static double textSize_80 = 80.0;
-  static double textSize_60 = 60.0;
-  static double textSize_50 = 50.0;
-  static double textSize_48 = 48.0;
-  static double textSize_44 = 44.0;
-  static double textSize_40 = 40.0;
-  static double textSize_36 = 36.0;
-  static double textSize_34 = 34.0;
-  static double textSize_32 = 32.0;
-  static double textSize_30 = 30.0;
-  static double textSize_28 = 28.0;
-  static double textSize_24 = 24.0;
-  static double textSize_22 = 22.0;
-  static double textSize_20 = 20.0;
-  static double textSize_18 = 18.0;
-  static double textSize_16 = 16.0;
-  static double textSize_14 = 14.0;
-  static double textSize_12 = 12.0;
-  static double textSize_10 = 10.0;
-  static double textSize_8 = 8.0;
+  static const double TEXT_SIZE_96 = 96.0;
+  static const double TEXT_SIZE_80 = 80.0;
+  static const double TEXT_SIZE_60 = 60.0;
+  static const double TEXT_SIZE_50 = 50.0;
+  static const double TEXT_SIZE_48 = 48.0;
+  static const double TEXT_SIZE_44 = 44.0;
+  static const double TEXT_SIZE_40 = 40.0;
+  static const double TEXT_SIZE_36 = 36.0;
+  static const double TEXT_SIZE_34 = 34.0;
+  static const double TEXT_SIZE_32 = 32.0;
+  static const double TEXT_SIZE_30 = 30.0;
+  static const double TEXT_SIZE_28 = 28.0;
+  static const double TEXT_SIZE_24 = 24.0;
+  static const double TEXT_SIZE_22 = 22.0;
+  static const double TEXT_SIZE_20 = 20.0;
+  static const double TEXT_SIZE_18 = 18.0;
+  static const double TEXT_SIZE_16 = 16.0;
+  static const double TEXT_SIZE_14 = 14.0;
+  static const double TEXT_SIZE_12 = 12.0;
+  static const double TEXT_SIZE_10 = 10.0;
+  static const double TEXT_SIZE_8 = 8.0;
 
   //IconSizes
   static const double ICON_SIZE_60 = 60.0;

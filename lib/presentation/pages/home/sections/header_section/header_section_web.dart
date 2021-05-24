@@ -21,18 +21,18 @@ class HeaderSectionWeb extends StatelessWidget {
     double contentAreaWidth = assignWidth(context, 0.5);
     double contentAreaHeight = assignHeight(context, 0.7);
     double introTextSize = context.layout.value(
-      xs: 40.0,
-      sm: 40.0,
-      md: 60.0,
-      lg: 60.0,
-      xl: 60.0,
+      xs: Sizes.TEXT_SIZE_40,
+      sm: Sizes.TEXT_SIZE_40,
+      md: Sizes.TEXT_SIZE_60,
+      lg: Sizes.TEXT_SIZE_60,
+      xl: Sizes.TEXT_SIZE_60,
     );
     double professionalTextSize = context.layout.value(
-      xs: Sizes.textSize_18,
-      sm: Sizes.textSize_18,
-      md: Sizes.textSize_20,
-      lg: Sizes.textSize_20,
-      xl: Sizes.textSize_20,
+      xs: Sizes.TEXT_SIZE_18,
+      sm: Sizes.TEXT_SIZE_18,
+      md: Sizes.TEXT_SIZE_20,
+      lg: Sizes.TEXT_SIZE_20,
+      xl: Sizes.TEXT_SIZE_20,
     );
 
     return Container(
@@ -179,7 +179,7 @@ class HeaderSectionWeb extends StatelessWidget {
                 child: SelectableText(
                   StringConst.CATCH_LINE,
                   style: textTheme.headline3?.copyWith(
-                    fontSize: Sizes.textSize_40,
+                    fontSize: Sizes.TEXT_SIZE_40,
                     fontWeight: FontWeight.w100,
                     color: AppColors.accentColor,
                   ),

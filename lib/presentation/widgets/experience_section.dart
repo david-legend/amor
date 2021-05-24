@@ -64,7 +64,7 @@ class ExperienceSection extends StatelessWidget {
             location,
             style: locationTextStyle ??
                 textTheme.bodyText1?.copyWith(
-                  fontSize: Sizes.textSize_16,
+                  fontSize: Sizes.TEXT_SIZE_16,
                   color: AppColors.accentColor,
                 ),
           ),
@@ -73,7 +73,7 @@ class ExperienceSection extends StatelessWidget {
             duration,
             style: durationTextStyle ??
                 textTheme.bodyText1?.copyWith(
-                  fontSize: Sizes.textSize_16,
+                  fontSize: Sizes.TEXT_SIZE_16,
                   color: AppColors.accentColor,
                 ),
           ),

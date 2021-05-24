@@ -31,7 +31,7 @@ class SubSectionTitle extends StatelessWidget {
           title,
           style: titleStyle ??
               textTheme.subtitle2?.copyWith(
-                fontSize: Sizes.textSize_20,
+                fontSize: Sizes.TEXT_SIZE_20,
                 color: titleTextColor ?? AppColors.accentColor,
               ),
         ),
@@ -40,7 +40,7 @@ class SubSectionTitle extends StatelessWidget {
           subtitle,
           style: subtitleStyle ??
               textTheme.headline6?.copyWith(
-                fontSize: Sizes.textSize_30,
+                fontSize: Sizes.TEXT_SIZE_30,
                 color: subtitleTextColor ?? AppColors.white,
                 fontWeight: FontWeight.w400,
               ),

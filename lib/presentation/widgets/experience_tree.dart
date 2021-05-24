@@ -285,21 +285,23 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
               width: widget.width / 2,
               top: offsetRoleLeaf,
               right: 0,
-              child: Container(
-                key: bodyLeafKey,
-                padding: EdgeInsets.only(
-                  left: (widget.width * widget.stalk),
-                ),
-                child: RightLeaf(
-                  title: widget.rightLeafTitle,
-                  titleTextStyle: widget.rightLeafTitleStyle,
-                  onTap: () {
-                    openUrlLink(widget.rightLeafTitleUrl);
-                  },
-                  subtitle: widget.rightLeafSubtitle,
-                  subtitleTextStyle: widget.rightLeafSubtitleStyle,
-                  body: widget.rightLeafBody,
-                  bodyTextStyle: widget.rightLeafBodyStyle,
+              child: SingleChildScrollView(
+                child: Container(
+                  key: bodyLeafKey,
+                  padding: EdgeInsets.only(
+                    left: (widget.width * widget.stalk),
+                  ),
+                  child: RightLeaf(
+                    title: widget.rightLeafTitle,
+                    titleTextStyle: widget.rightLeafTitleStyle,
+                    onTap: () {
+                      openUrlLink(widget.rightLeafTitleUrl);
+                    },
+                    subtitle: widget.rightLeafSubtitle,
+                    subtitleTextStyle: widget.rightLeafSubtitleStyle,
+                    body: widget.rightLeafBody,
+                    bodyTextStyle: widget.rightLeafBodyStyle,
+                  ),
                 ),
               ),
             )

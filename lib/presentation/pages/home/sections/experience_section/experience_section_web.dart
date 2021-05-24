@@ -40,8 +40,7 @@ class ExperienceSectionWeb extends StatelessWidget {
             subtitle: StringConst.EXPERIENCE,
             subtitleTextColor: AppColors.white,
           ),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Stack(
             children: [
               Container(
                 height: circleWidth,
@@ -54,7 +53,18 @@ class ExperienceSectionWeb extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
+              Container(
+                height: circleWidth,
+                width: circleWidth,
+                child: CustomPaint(
+                  painter: Circle(
+                    offset:
+                        Offset((screenWidth * 0.8) + smOffsetDx, smOffsetDy),
+                    radius: smCircleRadius,
+                    color: AppColors.purple500,
+                  ),
+                ),
+              ),
               ExperienceTree(
                 headTitle: StringConst.CURRENT_MONTH_YEAR,
                 tailTitle: StringConst.STARTED_MONTH_YEAR,
@@ -90,18 +100,6 @@ class ExperienceSectionWeb extends StatelessWidget {
                 innerJointColor: AppColors.accentColor50,
                 experienceData: Data.experienceData,
                 widthOfTree: assignWidth(context, 0.60),
-              ),
-              Spacer(),
-              Container(
-                height: circleWidth,
-                width: circleWidth,
-                child: CustomPaint(
-                  painter: Circle(
-                    offset: Offset(smOffsetDx, smOffsetDy),
-                    radius: smCircleRadius,
-                    color: AppColors.purple500,
-                  ),
-                ),
               ),
             ],
           ),

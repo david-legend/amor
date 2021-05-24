@@ -33,8 +33,7 @@ class EducationSectionWeb extends StatelessWidget {
             subtitleTextColor: AppColors.darkGrey400,
           ),
           SpaceH60(),
-          Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Stack(
             children: [
               Container(
                 height: circleWidth,
@@ -47,24 +46,23 @@ class EducationSectionWeb extends StatelessWidget {
                   ),
                 ),
               ),
-              Spacer(),
-              ExperienceTree(
-                headTitle: StringConst.CURRENT_MONTH_YEAR,
-                tailTitle: StringConst.STARTED_MONTH_YEAR,
-                experienceData: Data.experienceData,
-                widthOfTree: assignWidth(context, 0.60),
-              ),
-              Spacer(),
               Container(
                 height: circleWidth,
                 width: circleWidth,
                 child: CustomPaint(
                   painter: Circle(
-                    offset: Offset(lgOffsetDx, lgOffsetDy),
+                    offset:
+                        Offset((screenWidth * 0.8) + lgOffsetDx, lgOffsetDy),
                     radius: lgCircleRadius,
                     color: AppColors.accentColor100,
                   ),
                 ),
+              ),
+              ExperienceTree(
+                headTitle: StringConst.CURRENT_MONTH_YEAR,
+                tailTitle: StringConst.STARTED_MONTH_YEAR,
+                experienceData: Data.experienceData,
+                widthOfTree: screenWidth, //assignWidth(context, 0.60),
               ),
             ],
           ),

@@ -1,6 +1,7 @@
 import 'package:amor/presentation/routes/router.gr.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 
 import 'app_theme.dart';
 
@@ -13,12 +14,14 @@ class AmorApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      title: StringConst.APP_NAME,
-      theme: AppTheme.lightThemeData,
-      debugShowCheckedModeBanner: false,
-      routerDelegate: _appRouter.delegate(),
-      routeInformationParser: _appRouter.defaultRouteParser(),
+    return Layout(
+      child: MaterialApp.router(
+        title: StringConst.APP_NAME,
+        theme: AppTheme.lightThemeData,
+        debugShowCheckedModeBanner: false,
+        routerDelegate: _appRouter.delegate(),
+        routeInformationParser: _appRouter.defaultRouteParser(),
+      ),
     );
   }
 }

@@ -7,6 +7,8 @@ import 'package:amor/values/values.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:layout/layout.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 const kPadding24 = Sizes.PADDING_24;
 const kSpacing20 = Sizes.SIZE_20;
@@ -18,6 +20,20 @@ class HeaderSectionWeb extends StatelessWidget {
     double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     double contentAreaWidth = assignWidth(context, 0.5);
     double contentAreaHeight = assignHeight(context, 0.7);
+    double introTextSize = context.layout.value(
+      xs: 40.0,
+      sm: 40.0,
+      md: 60.0,
+      lg: 60.0,
+      xl: 60.0,
+    );
+    double professionalTextSize = context.layout.value(
+      xs: Sizes.textSize_18,
+      sm: Sizes.textSize_18,
+      md: Sizes.textSize_20,
+      lg: Sizes.textSize_20,
+      xl: Sizes.textSize_20,
+    );
 
     return Container(
       child: Row(
@@ -35,7 +51,9 @@ class HeaderSectionWeb extends StatelessWidget {
                   CustomPaint(
                     painter: Circle(
                       offset: Offset(
-                          contentAreaWidth * 0.4, contentAreaWidth * 0.0),
+                        contentAreaWidth * 0.4,
+                        contentAreaWidth * 0.0,
+                      ),
                       radius: Sizes.RADIUS_20,
                       color: AppColors.accentColor,
                     ),
@@ -44,7 +62,7 @@ class HeaderSectionWeb extends StatelessWidget {
                   SelectableText(
                     StringConst.INTRO,
                     style: GoogleFonts.merriweather(
-                      fontSize: Sizes.TEXT_SIZE_60,
+                      fontSize: introTextSize, // Sizes.textSize_60,
                       color: AppColors.primaryText,
                       fontWeight: FontWeight.w100,
                       fontStyle: FontStyle.normal,
@@ -53,6 +71,7 @@ class HeaderSectionWeb extends StatelessWidget {
                   SelectableText(
                     StringConst.NAME,
                     style: textTheme.headline2?.copyWith(
+                      fontSize: introTextSize,
                       color: AppColors.primaryColor,
                     ),
                   ),
@@ -60,7 +79,7 @@ class HeaderSectionWeb extends StatelessWidget {
                   SelectableText(
                     StringConst.PROFESSIONAL_POSITION,
                     style: textTheme.bodyText1?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_20,
+                      fontSize: professionalTextSize,
                       fontWeight: FontWeight.w300,
                     ),
                   ),
@@ -100,7 +119,9 @@ class HeaderSectionWeb extends StatelessWidget {
                   CustomPaint(
                     painter: Circle(
                       offset: Offset(
-                          contentAreaWidth * 0.825, contentAreaHeight * 0.35),
+                        contentAreaWidth * 0.825,
+                        contentAreaHeight * 0.35,
+                      ),
                       color: AppColors.purple100,
                       radius: Sizes.RADIUS_140,
                     ),
@@ -116,25 +137,23 @@ class HeaderSectionWeb extends StatelessWidget {
                     ),
                   ),
                   Center(
-                    child: Row(
-                      children: [
-                        SizedBox(
-                          width: (contentAreaWidth * 0.5) - kPadding24,
-                          child: SelectableText(
-                            StringConst.CATCH_LINE,
-                            style: textTheme.headline3?.copyWith(
-                              fontSize: Sizes.TEXT_SIZE_36,
-                              fontWeight: FontWeight.w100,
-                              color: AppColors.accentColor,
-                            ),
-                          ),
-                        ),
-                        Image.asset(
-                          ImagePath.sample_4,
-                          width: (contentAreaWidth * 0.5) - kPadding24,
-                          fit: BoxFit.scaleDown,
-                        ),
-                      ],
+                    child: ResponsiveBuilder(
+                      builder: (context, sizingInformation) {
+                        double screenWidth = sizingInformation.screenSize.width;
+                        if (screenWidth < RefinedBreakpoints().desktopSmall) {
+                          return _buildCatchLineAndImage(
+                            context,
+                            isCatchLineVisible: false,
+                            width: (contentAreaWidth * 0.9),
+                          );
+                        } else {
+                          return _buildCatchLineAndImage(
+                            context,
+                            isCatchLineVisible: true,
+                            width: (contentAreaWidth * 0.5),
+                          );
+                        }
+                      },
                     ),
                   )
                 ],
@@ -143,6 +162,36 @@ class HeaderSectionWeb extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+  Widget _buildCatchLineAndImage(
+    BuildContext context, {
+    required width,
+    isCatchLineVisible = true,
+  }) {
+    TextTheme textTheme = Theme.of(context).textTheme;
+    return Row(
+      children: [
+        isCatchLineVisible
+            ? SizedBox(
+                width: width - kPadding24,
+                child: SelectableText(
+                  StringConst.CATCH_LINE,
+                  style: textTheme.headline3?.copyWith(
+                    fontSize: Sizes.textSize_40,
+                    fontWeight: FontWeight.w100,
+                    color: AppColors.accentColor,
+                  ),
+                ),
+              )
+            : Container(),
+        Image.asset(
+          ImagePath.sample_4,
+          width: width - kPadding24,
+          fit: BoxFit.scaleDown,
+        ),
+      ],
     );
   }
 }

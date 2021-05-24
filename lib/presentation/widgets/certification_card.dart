@@ -155,7 +155,7 @@ class _CertificationCardState extends State<CertificationCard>
                               style: widget.subtitleTextStyle ??
                                   textTheme.bodyText1?.copyWith(
                                     color: AppColors.white,
-                                    fontSize: Sizes.TEXT_SIZE_16,
+                                    fontSize: Sizes.textSize_16,
                                   ),
                             ),
                             SpaceH16(),

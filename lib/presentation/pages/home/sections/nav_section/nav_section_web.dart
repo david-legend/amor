@@ -102,10 +102,9 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                   ResponsiveBuilder(
                     refinedBreakpoints: RefinedBreakpoints(),
                     builder: (context, sizingInformation) {
-                      if (sizingInformation.screenSize.width >=
-                              RefinedBreakpoints().tabletSmall &&
-                          sizingInformation.screenSize.width <
-                              RefinedBreakpoints().tabletNormal) {
+                      double screenWidth = sizingInformation.screenSize.width;
+                      if (screenWidth >= RefinedBreakpoints().tabletSmall &&
+                          screenWidth < RefinedBreakpoints().tabletNormal) {
                         return NavItem(
                           title: StringConst.SKILLS,
                           isSelected: widget.navItems[3].isSelected,

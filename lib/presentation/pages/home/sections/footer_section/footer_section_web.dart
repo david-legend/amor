@@ -22,11 +22,11 @@ class FooterSectionWeb extends StatelessWidget {
     double footerHeight = screenHeight * 0.2;
     TextTheme textTheme = Theme.of(context).textTheme;
     TextStyle? footerTextStyle = textTheme.bodyText1?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_12,
+      fontSize: Sizes.textSize_12,
       color: AppColors.accentColor500,
     );
     TextStyle? linkStyle = textTheme.bodyText1?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_12,
+      fontSize: Sizes.textSize_12,
       color: AppColors.white,
       decoration: TextDecoration.underline,
     );
@@ -80,7 +80,7 @@ class FooterSectionWeb extends StatelessWidget {
                   SelectableText(
                     StringConst.RIGHTS_RESERVED,
                     style: textTheme.bodyText1?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_12,
+                      fontSize: Sizes.textSize_12,
                       color: AppColors.accentColor500,
                     ),
                   ),

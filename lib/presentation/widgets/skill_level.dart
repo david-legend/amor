@@ -85,7 +85,7 @@ class SkillLevel extends StatelessWidget {
             skillName,
             style: skillNameTextStyle ??
                 Styles.customTextStyle(
-                  fontSize: Sizes.TEXT_SIZE_16,
+                  fontSize: Sizes.textSize_16,
                   color: AppColors.darkGrey600,
                   fontWeight: FontWeight.w400,
                 ),

@@ -6,6 +6,7 @@ import 'package:amor/presentation/widgets/sub_section_title.dart';
 import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 
 class SkillsSectionWeb extends StatefulWidget {
   @override
@@ -66,6 +67,15 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
 
   List<Widget> _buildCertification(List<CertificationData> data) {
     List<Widget> certifications = [];
+    double smHeight = assignHeight(context, 0.3);
+    double lgHeight = assignHeight(context, 0.45);
+    double certificateHeight = context.layout.value(
+      xs: smHeight,
+      sm: smHeight,
+      md: lgHeight,
+      lg: lgHeight,
+      xl: lgHeight,
+    );
 
     for (int i = 0; i < data.length; i++) {
       certifications.add(
@@ -78,12 +88,8 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
             color: AppColors.purple50,
             width: Sizes.WIDTH_2,
           ),
-          height: isDisplaySmallDesktopOrIpadPro(context)
-              ? assignHeight(context, 0.3)
-              : assignHeight(context, 0.45),
-          width: isDisplaySmallDesktopOrIpadPro(context)
-              ? assignWidth(context, 0.3)
-              : assignWidth(context, data[i].imageSize),
+          height: certificateHeight,
+          width: assignWidth(context, 0.3),
         ),
       );
     }

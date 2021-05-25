@@ -187,9 +187,9 @@ class HeaderSection extends StatelessWidget {
               )
             : Container(),
         Image.asset(
-          ImagePath.sample_4,
+          ImagePath.sm_11,
           width: width - kPadding24,
-          fit: BoxFit.scaleDown,
+          fit: BoxFit.cover,
         ),
       ],
     );

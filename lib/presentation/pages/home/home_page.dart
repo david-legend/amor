@@ -67,7 +67,10 @@ class _HomePageState extends State<HomePage> {
               controller: _scrollController,
               child: Column(
                 children: [
-                  Container(key: navItems[0].key, child: HeaderSection()),
+                  Container(
+                    key: navItems[0].key,
+                    child: HeaderSection(),
+                  ),
                   SpaceH60(),
                   Container(
                     key: navItems[1].key,

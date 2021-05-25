@@ -27,10 +27,14 @@ class _NavSectionWebState extends State<NavSectionWeb> {
       RenderBox box = widget.navItems[2].key.currentContext?.findRenderObject()
           as RenderBox;
       Offset position = box.localToGlobal(Offset.zero);
-      print("WE ARE HERE ${widget.scrollController.offset}");
+//      print("WE ARE HERE ${widget.scrollController.offset}");
       print("offset ${position.dy}");
-      if (position.dy == 56) {
+      if (position.dy >= 56 && position.dy < 60) {
         print("WE ARE HERE");
+        print("offset ${position.dy}");
+        setState(() {
+          widget.navItems[2].isSelected = true;
+        });
       }
     });
   }

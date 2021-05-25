@@ -19,34 +19,37 @@ class _SkillsSectionState extends State<SkillsSection> {
     double screenWidth = widthOfScreen(context);
     double spacing = (screenWidth / 4) / 2;
 
-    return Container(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SubSectionTitle(
-            title: StringConst.MY_CODING,
-            subtitle: StringConst.SKILLS,
-            subtitleTextColor: AppColors.darkGrey400,
-          ),
-          SpaceH40(),
-          Wrap(
-            spacing: spacing,
-            runSpacing: Sizes.SIZE_20,
-            children: _buildSkills(Data.skillData),
-          ),
-          SpaceH60(),
-          SubSectionTitle(
-            title: StringConst.MY,
-            subtitle: StringConst.CERTIFICATIONS,
-            subtitleTextColor: AppColors.darkGrey400,
-          ),
-          SpaceH60(),
-          Wrap(
-            spacing: Sizes.SIZE_20,
-            runSpacing: Sizes.SIZE_20,
-            children: _buildCertification(Data.certificationData),
-          ),
-        ],
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SubSectionTitle(
+              title: StringConst.MY_CODING,
+              subtitle: StringConst.SKILLS,
+              subtitleTextColor: AppColors.darkGrey400,
+            ),
+            SpaceH40(),
+            Wrap(
+              spacing: spacing,
+              runSpacing: Sizes.SIZE_20,
+              children: _buildSkills(Data.skillData),
+            ),
+            SpaceH60(),
+            SubSectionTitle(
+              title: StringConst.MY,
+              subtitle: StringConst.CERTIFICATIONS,
+              subtitleTextColor: AppColors.darkGrey400,
+            ),
+            SpaceH60(),
+            Wrap(
+              spacing: Sizes.SIZE_20,
+              runSpacing: Sizes.SIZE_20,
+              children: _buildCertification(Data.certificationData),
+            ),
+          ],
+        ),
       ),
     );
   }

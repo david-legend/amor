@@ -7,38 +7,16 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-//TODO:: set nav to active when at the right scroll position
 class NavSectionWeb extends StatefulWidget {
   final List<NavItemData> navItems;
-  final ScrollController scrollController;
 
-  NavSectionWeb({required this.navItems, required this.scrollController});
+  NavSectionWeb({required this.navItems});
 
   @override
   _NavSectionWebState createState() => _NavSectionWebState();
 }
 
 class _NavSectionWebState extends State<NavSectionWeb> {
-  @override
-  void initState() {
-    super.initState();
-    widget.scrollController.addListener(() {
-//      RenderBox box = context.currentContext?.findRenderObject() as RenderBox;
-      RenderBox box = widget.navItems[2].key.currentContext?.findRenderObject()
-          as RenderBox;
-      Offset position = box.localToGlobal(Offset.zero);
-//      print("WE ARE HERE ${widget.scrollController.offset}");
-      print("offset ${position.dy}");
-      if (position.dy >= 56 && position.dy < 60) {
-        print("WE ARE HERE");
-        print("offset ${position.dy}");
-        setState(() {
-          widget.navItems[2].isSelected = true;
-        });
-      }
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;

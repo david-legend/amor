@@ -58,7 +58,6 @@ class _HomePageState extends State<HomePage> {
               } else {
                 return NavSectionWeb(
                   navItems: navItems,
-                  scrollController: _scrollController,
                 );
               }
             },

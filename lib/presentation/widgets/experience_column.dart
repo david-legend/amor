@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 
-class ExperienceSection extends StatelessWidget {
-  ExperienceSection({
+class ExperienceColumn extends StatelessWidget {
+  ExperienceColumn({
     required this.duration,
     required this.position,
     required this.company,
@@ -17,6 +17,8 @@ class ExperienceSection extends StatelessWidget {
     this.durationTextStyle,
     this.positionTextStyle,
     this.onTap,
+    this.bodyTextStyle,
+    this.bodyBulletIconColor = AppColors.purple500,
   });
 
   final String duration;
@@ -30,13 +32,16 @@ class ExperienceSection extends StatelessWidget {
   final TextStyle? locationTextStyle;
   final TextStyle? companyTextStyle;
   final TextStyle? positionTextStyle;
+  final TextStyle? bodyTextStyle;
   final TextStyle? durationTextStyle;
+  final Color bodyBulletIconColor;
 
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Container(
-      child: ListView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
@@ -44,7 +49,7 @@ class ExperienceSection extends StatelessWidget {
                 position,
                 style: positionTextStyle ??
                     textTheme.headline6?.copyWith(
-                      color: AppColors.accentColor,
+                      color: AppColors.primaryText,
                     ),
               ),
               SpaceW4(),
@@ -54,7 +59,8 @@ class ExperienceSection extends StatelessWidget {
                   '@' + company,
                   style: companyTextStyle ??
                       textTheme.headline6?.copyWith(
-                        color: AppColors.accentColor,
+                        color: AppColors.purple500,
+                        fontSize: Sizes.TEXT_SIZE_16,
                       ),
                 ),
               )
@@ -65,7 +71,7 @@ class ExperienceSection extends StatelessWidget {
             style: locationTextStyle ??
                 textTheme.bodyText1?.copyWith(
                   fontSize: Sizes.TEXT_SIZE_16,
-                  color: AppColors.accentColor,
+                  color: AppColors.primaryText,
                 ),
           ),
           SpaceH4(),
@@ -74,7 +80,7 @@ class ExperienceSection extends StatelessWidget {
             style: durationTextStyle ??
                 textTheme.bodyText1?.copyWith(
                   fontSize: Sizes.TEXT_SIZE_16,
-                  color: AppColors.accentColor,
+                  color: AppColors.primaryText,
                 ),
           ),
           SpaceH16(),
@@ -87,7 +93,13 @@ class ExperienceSection extends StatelessWidget {
   List<Widget> _buildBody(List<String> roles) {
     List<Widget> bodyWidgets = [];
     for (var index = 0; index < roles.length; index++) {
-      bodyWidgets.add(Body(body: roles[index]));
+      bodyWidgets.add(
+        Body(
+          body: roles[index],
+          bodyTextStyle: bodyTextStyle,
+          color: bodyBulletIconColor,
+        ),
+      );
       bodyWidgets.add(SpaceH8());
     }
 
@@ -101,7 +113,7 @@ class Body extends StatelessWidget {
     this.bodyTextStyle,
     this.icon = Icons.arrow_right,
     this.iconSize = Sizes.ICON_SIZE_18,
-    this.color = AppColors.accentColor,
+    this.color = AppColors.purple500,
   });
 
   final String body;
@@ -126,7 +138,7 @@ class Body extends StatelessWidget {
             body,
             style: bodyTextStyle ??
                 textTheme.bodyText1?.copyWith(
-                  color: AppColors.accentColor,
+                  color: AppColors.primaryText,
                 ),
           ),
         ),

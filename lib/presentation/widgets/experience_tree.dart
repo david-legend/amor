@@ -6,7 +6,7 @@ import 'package:amor/utils/functions.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'experience_section.dart';
+import 'experience_column.dart';
 
 class ExperienceData {
   ExperienceData({
@@ -343,7 +343,7 @@ class LeftLeaf extends StatelessWidget {
                 style: titleTextStyle ??
                     textTheme.bodyText2?.copyWith(
                       color: AppColors.darkGrey100,
-                      fontSize: Sizes.TEXT_SIZE_12,
+                      fontSize: Sizes.TEXT_SIZE_14,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -365,6 +365,7 @@ class LeftLeaf extends StatelessWidget {
                 style: subtitleTextStyle ??
                     textTheme.bodyText2?.copyWith(
                       color: defaultIconColor,
+                      fontSize: Sizes.TEXT_SIZE_15,
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -425,6 +426,7 @@ class RightLeaf extends StatelessWidget {
             style: subtitleTextStyle ??
                 Styles.customTextStyle(
                   fontStyle: FontStyle.italic,
+                  fontSize: Sizes.TEXT_SIZE_15,
                 ),
           ),
           SpaceH8(),
@@ -451,6 +453,7 @@ class RightLeaf extends StatelessWidget {
               textTheme.bodyText2?.copyWith(
                 color: AppColors.primaryText,
                 fontWeight: FontWeight.bold,
+                fontSize: Sizes.TEXT_SIZE_15,
               ),
           color: AppColors.darkGrey300,
         ),

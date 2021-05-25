@@ -1,6 +1,8 @@
 import 'package:amor/presentation/layout/adaptive.dart';
+import 'package:amor/presentation/widgets/circular_container.dart';
 import 'package:amor/presentation/widgets/content_area.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
+import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -8,6 +10,7 @@ class NavSectionMobile extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
   const NavSectionMobile({required this.scaffoldKey});
+
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
@@ -56,6 +59,19 @@ class NavSectionMobile extends StatelessWidget {
             width: contentAreaWidth,
             height: Sizes.HEIGHT_56,
             backgroundColor: AppColors.purple500,
+            padding: const EdgeInsets.only(right: Sizes.PADDING_16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                CircularContainer(
+                  color: AppColors.purple100,
+                  child: IconButton(
+                    onPressed: () => openUrlLink(StringConst.EMAIL_URL),
+                    icon: Icon(Icons.mail_outline),
+                  ),
+                )
+              ],
+            ),
           ),
         ],
       ),

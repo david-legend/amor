@@ -99,7 +99,7 @@ class ExperienceSectionWeb extends StatelessWidget {
                 outerJointColor: AppColors.darkBlue400,
                 innerJointColor: AppColors.accentColor50,
                 experienceData: Data.experienceData,
-                widthOfTree: assignWidth(context, 0.60),
+                widthOfTree: assignWidth(context, 0.8),
               ),
             ],
           ),

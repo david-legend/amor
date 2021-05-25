@@ -1,5 +1,6 @@
 import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/widgets/circle.dart';
+import 'package:amor/presentation/widgets/creators.dart';
 import 'package:amor/presentation/widgets/social_icons.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/utils/functions.dart';
@@ -73,88 +74,10 @@ class FooterSectionWeb extends StatelessWidget {
           Row(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  SelectableText(
-                    StringConst.RIGHTS_RESERVED,
-                    style: textTheme.bodyText1?.copyWith(
-                      fontSize: Sizes.TEXT_SIZE_12,
-                      color: AppColors.accentColor500,
-                    ),
-                  ),
-                  SpaceH2(),
-                  Row(
-                    children: [
-                      InkWell(
-                        onTap: () => openUrlLink(StringConst.DAVID_LEGEND_URL),
-                        child: RichText(
-                          text: TextSpan(
-                            style: footerTextStyle,
-                            text: "${StringConst.BUILT_BY} ",
-                            children: [
-                              TextSpan(
-                                text: "${StringConst.DAVID_COBBINA}, ",
-                                style: linkStyle,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                      InkWell(
-                        onTap: () => openUrlLink(StringConst.DESIGN_URL),
-                        child: RichText(
-                          text: TextSpan(
-                            text: "${StringConst.DESIGNED_BY} ",
-                            style: footerTextStyle,
-                            children: [
-                              TextSpan(
-                                text: "${StringConst.ADEEL_RAZA}.",
-                                style: linkStyle,
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                  SpaceH2(),
-                  Row(
-                    children: [
-                      SelectableText(
-                        StringConst.MADE_IN_GHANA,
-                        style: footerTextStyle,
-                      ),
-                      SpaceW4(),
-                      ClipRRect(
-                        borderRadius:
-                            BorderRadius.all(const Radius.circular(20)),
-                        child: Image.asset(
-                          ImagePath.GHANA_FLAG,
-                          width: Sizes.WIDTH_16,
-                          height: Sizes.HEIGHT_16,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                      SpaceW4(),
-                      SelectableText(
-                        " ${StringConst.WITH_LOVE}",
-                        style: footerTextStyle,
-                      ),
-                      SpaceW4(),
-                      Icon(
-                        FontAwesomeIcons.solidHeart,
-                        color: AppColors.red,
-                        size: Sizes.ICON_SIZE_12,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              Creators(),
               Spacer(),
               SocialIcons(
-                iconColor: AppColors.accentColor500,
+                iconColor: AppColors.offWhite,
                 icons: [
                   FontAwesomeIcons.linkedin,
                   FontAwesomeIcons.github,

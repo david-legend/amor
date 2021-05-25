@@ -121,7 +121,7 @@ class StringConst {
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";
   static const String BUILT_BY = "Built with Flutter by";
   static const String DAVID_COBBINA = "David Cobbina";
-  static const String DESIGNED_BY = "Built by";
+  static const String DESIGNED_BY = "Designed by";
   static const String ADEEL_RAZA = "Adeel Raza";
   static const String MADE_IN_GHANA = "Made in";
   static const String WITH_LOVE = "with";

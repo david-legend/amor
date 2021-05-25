@@ -62,7 +62,7 @@ class EducationSectionWeb extends StatelessWidget {
                 headTitle: StringConst.CURRENT_MONTH_YEAR,
                 tailTitle: StringConst.STARTED_MONTH_YEAR,
                 experienceData: Data.experienceData,
-                widthOfTree: screenWidth, //assignWidth(context, 0.60),
+                widthOfTree: assignWidth(context, 0.8),
               ),
             ],
           ),

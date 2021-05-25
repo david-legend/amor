@@ -7,6 +7,7 @@ import 'package:amor/presentation/pages/home/sections/header_section/header_sect
 import 'package:amor/presentation/pages/home/sections/nav_section/nav_section_mobile.dart';
 import 'package:amor/presentation/pages/home/sections/nav_section/nav_section_web.dart';
 import 'package:amor/presentation/pages/home/sections/skills_section/skills_section.dart';
+import 'package:amor/presentation/widgets/app_drawer.dart';
 import 'package:amor/presentation/widgets/nav_item.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
@@ -15,7 +16,15 @@ import 'package:responsive_builder/responsive_builder.dart';
 
 const kDuration = Duration(milliseconds: 600);
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey();
+  final ScrollController _scrollController = ScrollController();
+
   final List<NavItemData> navItems = [
     NavItemData(name: StringConst.HOME, key: GlobalKey(), isSelected: true),
     NavItemData(name: StringConst.ABOUT, key: GlobalKey()),
@@ -28,20 +37,37 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
     return Scaffold(
+      key: _scaffoldKey,
+      drawer: ResponsiveBuilder(
+        refinedBreakpoints: RefinedBreakpoints(),
+        builder: (context, sizingInformation) {
+          if (sizingInformation.isMobile) {
+            return AppDrawer(
+              menuList: navItems,
+            );
+          } else {
+            return Container();
+          }
+        },
+      ),
       body: Column(
         children: [
           ResponsiveBuilder(
             refinedBreakpoints: RefinedBreakpoints(),
             builder: (context, sizingInformation) {
               if (sizingInformation.isMobile) {
-                return NavSectionMobile();
+                return NavSectionMobile(scaffoldKey: _scaffoldKey);
               } else {
-                return NavSectionWeb(navItems: navItems);
+                return NavSectionWeb(
+                  navItems: navItems,
+                  scrollController: _scrollController,
+                );
               }
             },
           ),
           Expanded(
             child: SingleChildScrollView(
+              controller: _scrollController,
               child: Column(
                 children: [
                   Container(key: navItems[0].key, child: HeaderSection()),

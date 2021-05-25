@@ -1,11 +1,11 @@
 {
-    "name": "amor",
-    "short_name": "amor",
+    "name": "Janet Mutesi",
+    "short_name": "Janet Mutesi",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter application.",
+    "description": "Portfolio Design detailing my works, achievements, CV and work experience",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

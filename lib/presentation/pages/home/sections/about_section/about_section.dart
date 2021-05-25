@@ -59,8 +59,15 @@ class _AboutSectionState extends State<AboutSection> {
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
     double screenWidth = widthOfScreen(context);
+    double aboutMeFontSIze = context.layout.value(
+      xs: Sizes.TEXT_SIZE_16,
+      sm: Sizes.TEXT_SIZE_18,
+      md: Sizes.TEXT_SIZE_18,
+      lg: Sizes.TEXT_SIZE_18,
+      xl: Sizes.TEXT_SIZE_18,
+    );
     TextStyle? aboutMeTextStyle = textTheme.bodyText1?.copyWith(
-      fontSize: Sizes.TEXT_SIZE_18,
+      fontSize: aboutMeFontSIze,
       color: AppColors.accentColor,
       fontWeight: FontWeight.w300,
       letterSpacing: 0.1,

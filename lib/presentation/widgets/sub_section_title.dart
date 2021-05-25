@@ -1,6 +1,7 @@
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 
 class SubSectionTitle extends StatelessWidget {
   final String title;
@@ -24,6 +25,20 @@ class SubSectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    double subtitleFontSize = context.layout.value(
+      xs: Sizes.TEXT_SIZE_18,
+      sm: Sizes.TEXT_SIZE_20,
+      md: Sizes.TEXT_SIZE_20,
+      lg: Sizes.TEXT_SIZE_20,
+      xl: Sizes.TEXT_SIZE_20,
+    );
+    double titleFontSize = context.layout.value(
+      xs: Sizes.TEXT_SIZE_28,
+      sm: Sizes.TEXT_SIZE_30,
+      md: Sizes.TEXT_SIZE_30,
+      lg: Sizes.TEXT_SIZE_30,
+      xl: Sizes.TEXT_SIZE_30,
+    );
     return Column(
       crossAxisAlignment: crossAxisAlignment,
       children: [
@@ -31,7 +46,7 @@ class SubSectionTitle extends StatelessWidget {
           title,
           style: titleStyle ??
               textTheme.subtitle2?.copyWith(
-                fontSize: Sizes.TEXT_SIZE_20,
+                fontSize: subtitleFontSize,
                 color: titleTextColor ?? AppColors.accentColor,
               ),
         ),
@@ -40,7 +55,7 @@ class SubSectionTitle extends StatelessWidget {
           subtitle,
           style: subtitleStyle ??
               textTheme.headline6?.copyWith(
-                fontSize: Sizes.TEXT_SIZE_30,
+                fontSize: titleFontSize,
                 color: subtitleTextColor ?? AppColors.white,
                 fontWeight: FontWeight.w400,
               ),

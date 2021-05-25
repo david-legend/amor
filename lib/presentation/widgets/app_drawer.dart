@@ -2,6 +2,7 @@ import 'package:amor/presentation/layout/adaptive.dart';
 import 'package:amor/presentation/widgets/creators.dart';
 import 'package:amor/presentation/widgets/social_icons.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
+import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
@@ -12,7 +13,7 @@ import 'nav_item.dart';
 
 const kSpacing20 = Sizes.SIZE_20;
 
-class AppDrawer extends StatelessWidget {
+class AppDrawer extends StatefulWidget {
   final Color color;
   final double? width;
   final List<NavItemData> menuList;
@@ -26,12 +27,17 @@ class AppDrawer extends StatelessWidget {
   });
 
   @override
+  _AppDrawerState createState() => _AppDrawerState();
+}
+
+class _AppDrawerState extends State<AppDrawer> {
+  @override
   Widget build(BuildContext context) {
     return Container(
-      width: width ?? assignWidth(context, 0.7),
+      width: widget.width ?? assignWidth(context, 0.7),
       child: Drawer(
         child: Container(
-          color: color,
+          color: widget.color,
           child: Column(
             children: [
               SpaceH16(),
@@ -40,7 +46,7 @@ class AppDrawer extends StatelessWidget {
                 child: Align(
                   alignment: Alignment.centerRight,
                   child: InkWell(
-                    onTap: onClose ?? () => context.router.pop(),
+                    onTap: widget.onClose ?? () => _closeDrawer(),
                     child: CircularContainer(
                       color: AppColors.purple50,
                       width: Sizes.WIDTH_30,
@@ -57,7 +63,7 @@ class AppDrawer extends StatelessWidget {
               Spacer(),
               ..._buildMenuList(
                 context: context,
-                menuList: menuList,
+                menuList: widget.menuList,
               ),
               Spacer(flex: 3),
               SocialIcons(
@@ -100,7 +106,10 @@ class AppDrawer extends StatelessWidget {
     for (var i = 0; i < menuList.length; i++) {
       menuItems.add(
         NavItem(
-          onTap: () {},
+          onTap: () => _onTapNavItem(
+            context: menuList[i].key,
+            navItemName: menuList[i].name,
+          ),
           title: menuList[i].name,
           isSelected: menuList[i].isSelected,
           titleStyle: textTheme.bodyText1?.copyWith(
@@ -116,5 +125,26 @@ class AppDrawer extends StatelessWidget {
       menuItems.add(Spacer());
     }
     return menuItems;
+  }
+
+  _onTapNavItem({
+    required GlobalKey context,
+    required String navItemName,
+  }) {
+    for (int index = 0; index < widget.menuList.length; index++) {
+      if (navItemName == widget.menuList[index].name) {
+        scrollToSection(context.currentContext!);
+        setState(() {
+          widget.menuList[index].isSelected = true;
+        });
+        _closeDrawer();
+      } else {
+        widget.menuList[index].isSelected = false;
+      }
+    }
+  }
+
+  _closeDrawer() {
+    context.router.pop();
   }
 }

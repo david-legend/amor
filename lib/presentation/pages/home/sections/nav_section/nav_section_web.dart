@@ -7,8 +7,6 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-const kDuration = Duration(milliseconds: 600);
-
 //TODO:: set nav to active when at the right scroll position
 class NavSectionWeb extends StatefulWidget {
   final List<NavItemData> navItems;
@@ -161,15 +159,4 @@ class _NavSectionWebState extends State<NavSectionWeb> {
       }
     }
   }
-
-  scrollToSection(BuildContext context) {
-    Scrollable.ensureVisible(
-      context,
-      duration: kDuration,
-    );
-  }
-
-//  setNavItemActive() {
-//    switch()
-//  }
 }

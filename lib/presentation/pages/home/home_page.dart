@@ -14,8 +14,6 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-const kDuration = Duration(milliseconds: 600);
-
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
@@ -105,13 +103,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-    );
-  }
-
-  scrollToSection(BuildContext context) {
-    Scrollable.ensureVisible(
-      context,
-      duration: kDuration,
     );
   }
 }

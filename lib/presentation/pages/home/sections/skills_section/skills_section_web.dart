@@ -42,7 +42,7 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
           ),
           SpaceH60(),
           Wrap(
-            spacing: spacing,
+            spacing: Sizes.SIZE_20,
             runSpacing: Sizes.SIZE_20,
             children: _buildCertification(Data.certificationData),
           ),
@@ -53,12 +53,21 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
 
   List<Widget> _buildSkills(List<SkillData> data) {
     List<Widget> skills = [];
+    double skillWidth = context.layout.value(
+      xs: Sizes.WIDTH_100,
+      sm: Sizes.WIDTH_120,
+      md: Sizes.WIDTH_120,
+      lg: Sizes.WIDTH_120,
+      xl: Sizes.WIDTH_120,
+    );
 
     for (int index = 0; index < data.length; index++) {
       skills.add(
         SkillLevel(
           skillLevel: data[index].skillLevel,
           skillName: data[index].skillName,
+          width: skillWidth,
+          height: skillWidth,
         ),
       );
     }
@@ -67,6 +76,8 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
 
   List<Widget> _buildCertification(List<CertificationData> data) {
     List<Widget> certifications = [];
+    double smWidth = assignWidth(context, 0.3);
+    double lgWidth = assignWidth(context, 0.5);
     double smHeight = assignHeight(context, 0.3);
     double lgHeight = assignHeight(context, 0.45);
     double certificateHeight = context.layout.value(
@@ -75,6 +86,13 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
       md: lgHeight,
       lg: lgHeight,
       xl: lgHeight,
+    );
+    double certificateWidth = context.layout.value(
+      xs: lgWidth,
+      sm: smWidth,
+      md: smWidth,
+      lg: smWidth,
+      xl: smWidth,
     );
 
     for (int i = 0; i < data.length; i++) {
@@ -89,7 +107,7 @@ class _SkillsSectionWebState extends State<SkillsSectionWeb> {
             width: Sizes.WIDTH_2,
           ),
           height: certificateHeight,
-          width: assignWidth(context, 0.3),
+          width: certificateWidth,
         ),
       );
     }

@@ -148,9 +148,9 @@ class _CertificationCardState extends State<CertificationCard>
                               style: widget.titleTextStyle ??
                                   textTheme.headline4?.copyWith(
                                     fontSize: widthOfScreen(context) >
-                                            RefinedBreakpoints().mobileLarge
+                                            RefinedBreakpoints().tabletSmall
                                         ? Sizes.TEXT_SIZE_34
-                                        : Sizes.TEXT_SIZE_20,
+                                        : Sizes.TEXT_SIZE_24,
                                     color: AppColors.white,
                                   ),
                             ),

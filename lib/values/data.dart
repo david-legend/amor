@@ -57,4 +57,35 @@ class Data {
       awardedBy: StringConst.RISA,
     )
   ];
+
+  static List<PortfolioData> portfolioData = [
+    PortfolioData(
+      imageUrl: ImagePath.art_1,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_2,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_3,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_4,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_5,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_6,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_7,
+      title: StringConst.DIGITAL_WALL_POSTER,
+    ),
+  ];
 }

@@ -37,4 +37,12 @@ class ImagePath {
   static const String sm_14 = "$imageDir/sm_14.png";
   static const String sm_15 = "$imageDir/sm_15.png";
   static const String sm_16 = "$imageDir/sm_16.png";
+
+  static const String art_1 = "$imageDir/art_1.jpg";
+  static const String art_2 = "$imageDir/art_2.jpg";
+  static const String art_3 = "$imageDir/art_3.jpg";
+  static const String art_4 = "$imageDir/art_4.jpg";
+  static const String art_5 = "$imageDir/art_5.jpg";
+  static const String art_6 = "$imageDir/art_6.jpg";
+  static const String art_7 = "$imageDir/art_7.jpg";
 }

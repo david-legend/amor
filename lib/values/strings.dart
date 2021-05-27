@@ -117,6 +117,16 @@ class StringConst {
   static const IOT_CERT = "IOT Certification";
   static const RISA = "RISA";
 
+  //Portfolio Section
+  static const String PORTFOLIO = "Portfolio";
+  static const String GRAPHICS = "Graphics";
+  static const String APP_DESIGN = "App Design";
+  static const String BRANDING = "Branding";
+  static const String GAME_DESIGN = "Game Design";
+  static const String WEB_DESIGN = "Web Design";
+  static const String ALL = "All";
+  static const String DIGITAL_WALL_POSTER = "Digital Wall Poster";
+
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";
   static const String BUILT_BY = "Built with Flutter by";

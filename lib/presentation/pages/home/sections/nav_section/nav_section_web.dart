@@ -6,6 +6,7 @@ import 'package:amor/utils/functions.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:layout/layout.dart';
 
 class NavSectionWeb extends StatefulWidget {
   final List<NavItemData> navItems;
@@ -55,7 +56,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                     navItemName: widget.navItems[0].name,
                   ),
                 ),
-                SpaceW40(),
+                horizontalSpacing(),
                 NavItem(
                   title: widget.navItems[1].name,
                   isSelected: widget.navItems[1].isSelected,
@@ -85,13 +86,13 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                     navItemName: widget.navItems[2].name,
                   ),
                 ),
-                SpaceW40(),
+                horizontalSpacing(),
                 ResponsiveBuilder(
                   refinedBreakpoints: RefinedBreakpoints(),
                   builder: (context, sizingInformation) {
                     double screenWidth = sizingInformation.screenSize.width;
-                    if (screenWidth >= RefinedBreakpoints().tabletSmall &&
-                        screenWidth < RefinedBreakpoints().tabletNormal) {
+                    //TODO:: Use this for actual.. if (screenWidth >= RefinedBreakpoints().tabletSmall &&  screenWidth < RefinedBreakpoints().tabletNormal) {
+                    if (screenWidth < RefinedBreakpoints().tabletExtraLarge) {
                       return NavItem(
                         title: StringConst.SKILLS,
                         isSelected: widget.navItems[3].isSelected,
@@ -112,10 +113,19 @@ class _NavSectionWebState extends State<NavSectionWeb> {
                     }
                   },
                 ),
-                SpaceW40(),
+                horizontalSpacing(),
                 NavItem(
                   title: widget.navItems[4].name,
                   isSelected: widget.navItems[4].isSelected,
+                  onTap: () => _onTapNavItem(
+                    context: widget.navItems[4].key,
+                    navItemName: widget.navItems[4].name,
+                  ),
+                ),
+                horizontalSpacing(),
+                NavItem(
+                  title: widget.navItems[5].name,
+                  isSelected: widget.navItems[5].isSelected,
                   onTap: () => openUrlLink(StringConst.EMAIL_URL),
                 ),
               ],
@@ -140,5 +150,16 @@ class _NavSectionWebState extends State<NavSectionWeb> {
         widget.navItems[index].isSelected = false;
       }
     }
+  }
+
+  Widget horizontalSpacing() {
+    double width = context.layout.value(
+      xs: Sizes.WIDTH_24,
+      sm: Sizes.WIDTH_24,
+      md: Sizes.WIDTH_40,
+      lg: Sizes.WIDTH_40,
+      xl: Sizes.WIDTH_40,
+    );
+    return SizedBox(width: width);
   }
 }

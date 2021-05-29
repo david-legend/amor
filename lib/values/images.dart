@@ -19,6 +19,9 @@ class ImagePath {
   static const String jm_3 = "$imageDir/jm_3.png";
   static const String jm_4 = "$imageDir/jm_4.png";
   static const String IOT_CERT = "$imageDir/iot_cert.png";
+  static const String ASSOCIATE_ANDROID_DEV_CERT =
+      "$imageDir/associate_android_dev.png";
+  static const String DATA_SCIENCE_CERT = "$imageDir/data_science_cert.png";
   static const String GHANA_FLAG = "$imageDir/ghana_flag.png";
 
   static const String sm_1 = "$imageDir/sm_1.png";

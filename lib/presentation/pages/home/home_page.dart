@@ -14,7 +14,7 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-import 'sections/portfolio_section/portfolio_section.dart';
+//import 'sections/portfolio_section/portfolio_section.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -101,14 +101,14 @@ class _HomePageState extends State<HomePage> {
                       child: SkillsSection(),
                     ),
                   ),
-                  SpaceH60(),
-                  Container(
-                    key: navItems[4].key,
-                    child: Padding(
-                      padding: EdgeInsets.symmetric(horizontal: sidePadding),
-                      child: PortfolioSection(),
-                    ),
-                  ),
+//                  SpaceH60(),
+//                  Container(
+//                    key: navItems[4].key,
+//                    child: Padding(
+//                      padding: EdgeInsets.symmetric(horizontal: sidePadding),
+//                      child: PortfolioSection(),
+//                    ),
+//                  ),
                   SpaceH60(),
                   FooterSection(),
                 ],

@@ -1,10 +1,10 @@
 import 'package:amor/presentation/layout/adaptive.dart';
+import 'package:amor/presentation/widgets/empty.dart';
 import 'package:amor/presentation/widgets/tree_painter.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:amor/utils/functions.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 import 'experience_column.dart';
 
@@ -12,7 +12,7 @@ class ExperienceData {
   ExperienceData({
     required this.title,
     required this.titleUrl,
-    required this.subtitle,
+    this.subtitle,
     required this.body,
     required this.location,
     required this.duration,
@@ -22,7 +22,7 @@ class ExperienceData {
   final String titleUrl;
   final String location;
   final String duration;
-  final String subtitle;
+  final String? subtitle;
   final List<String> body;
 }
 
@@ -46,6 +46,7 @@ class ExperienceTree extends StatelessWidget {
     this.rightLeafTitleStyle,
     this.rightLeafSubtitleStyle,
     this.rightLeafBodyStyle,
+    this.rightLeafIconData,
     this.veinsColor,
     this.outerJointColor,
     this.innerJointColor,
@@ -65,6 +66,7 @@ class ExperienceTree extends StatelessWidget {
   final TextStyle? leftLeafSubtitleStyle;
   final TextStyle? rightLeafTitleStyle;
   final TextStyle? rightLeafBodyStyle;
+  final IconData? rightLeafIconData;
   final TextStyle? rightLeafSubtitleStyle;
   final Icon? leftLeafTitleIcon;
   final Icon? leftLeafSubtitleIcon;
@@ -149,6 +151,7 @@ class ExperienceTree extends StatelessWidget {
           rightLeafTitleStyle: rightLeafTitleStyle,
           rightLeafSubtitleStyle: rightLeafSubtitleStyle,
           rightLeafBodyStyle: rightLeafBodyStyle,
+          rightLeafIconData: rightLeafIconData,
           width: widthOfTree,
           height: isDisplaySmallDesktop(context)
               ? assignHeight(context, 0.45)
@@ -175,7 +178,8 @@ class ExperienceBranch extends StatefulWidget {
     this.leftLeafSubtitleIcon,
     this.leftLeafIconColor,
     required this.rightLeafTitle,
-    required this.rightLeafSubtitle,
+    this.rightLeafSubtitle,
+    this.rightLeafIconData,
     required this.rightLeafBody,
     required this.rightLeafTitleUrl,
     this.leftLeafTitleStyle,
@@ -199,12 +203,13 @@ class ExperienceBranch extends StatefulWidget {
   final String leftLeafSubtitle;
   final String rightLeafTitle;
   final String rightLeafTitleUrl;
-  final String rightLeafSubtitle;
+  final String? rightLeafSubtitle;
   final List<String> rightLeafBody;
   final TextStyle? leftLeafTitleStyle;
   final TextStyle? leftLeafSubtitleStyle;
   final TextStyle? rightLeafTitleStyle;
   final TextStyle? rightLeafBodyStyle;
+  final IconData? rightLeafIconData;
   final TextStyle? rightLeafSubtitleStyle;
   final Icon? leftLeafTitleIcon;
   final Icon? leftLeafSubtitleIcon;
@@ -293,6 +298,7 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
                 child: RightLeaf(
                   title: widget.rightLeafTitle,
                   titleTextStyle: widget.rightLeafTitleStyle,
+                  iconData: widget.rightLeafIconData,
                   onTap: () {
                     openUrlLink(widget.rightLeafTitleUrl);
                   },
@@ -387,8 +393,9 @@ class LeftLeaf extends StatelessWidget {
 class RightLeaf extends StatelessWidget {
   RightLeaf({
     required this.title,
-    required this.subtitle,
+    this.subtitle,
     required this.body,
+    this.iconData,
     this.titleTextStyle,
     this.subtitleTextStyle,
     this.bodyTextStyle,
@@ -396,7 +403,8 @@ class RightLeaf extends StatelessWidget {
   });
 
   final String title;
-  final String subtitle;
+  final String? subtitle;
+  final IconData? iconData;
   final List<String> body;
   final TextStyle? titleTextStyle;
   final TextStyle? subtitleTextStyle;
@@ -421,14 +429,16 @@ class RightLeaf extends StatelessWidget {
                   ),
             ),
           ),
-          SelectableText(
-            subtitle,
-            style: subtitleTextStyle ??
-                Styles.customTextStyle(
-                  fontStyle: FontStyle.italic,
-                  fontSize: Sizes.TEXT_SIZE_15,
+          subtitle == null
+              ? Empty()
+              : SelectableText(
+                  subtitle!,
+                  style: subtitleTextStyle ??
+                      Styles.customTextStyle(
+                        fontStyle: FontStyle.italic,
+                        fontSize: Sizes.TEXT_SIZE_15,
+                      ),
                 ),
-          ),
           SpaceH8(),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -449,6 +459,7 @@ class RightLeaf extends StatelessWidget {
       bodyWidgets.add(
         Body(
           body: body[index],
+          icon: iconData,
           bodyTextStyle: bodyTextStyle ??
               textTheme.bodyText2?.copyWith(
                 color: AppColors.primaryText,

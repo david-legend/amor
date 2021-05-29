@@ -65,13 +65,13 @@ class EducationSection extends StatelessWidget {
                   if (sizingInformation.isMobile) {
                     return Column(
                       children:
-                          _buildEducationSectionForMobile(Data.experienceData),
+                          _buildEducationSectionForMobile(Data.educationData),
                     );
                   } else {
                     return ExperienceTree(
-                      headTitle: StringConst.CURRENT_MONTH_YEAR,
-                      tailTitle: StringConst.STARTED_MONTH_YEAR,
-                      experienceData: Data.experienceData,
+                      headTitle: StringConst.EDUCATION_CURRENT_MONTH_YEAR,
+                      tailTitle: StringConst.EDUCATION_STARTED_MONTH_YEAR,
+                      experienceData: Data.educationData,
                       widthOfTree: assignWidth(context, 0.8),
                     );
                   }
@@ -85,7 +85,8 @@ class EducationSection extends StatelessWidget {
   }
 
   List<Widget> _buildEducationSectionForMobile(
-      List<ExperienceData> experienceData) {
+    List<ExperienceData> experienceData,
+  ) {
     List<Widget> content = [];
     for (var index = 0; index < experienceData.length; index++) {
       content.add(
@@ -95,12 +96,12 @@ class EducationSection extends StatelessWidget {
             vertical: Sizes.PADDING_16,
           ),
           child: ExperienceColumn(
-            position: experienceData[index].title,
-            company: experienceData[index].subtitle,
+            title: experienceData[index].title,
+            subtitle: experienceData[index].subtitle,
             duration: experienceData[index].duration,
             location: experienceData[index].location,
             roles: experienceData[index].body,
-            companyUrl: experienceData[index].titleUrl,
+            subtitleUrl: experienceData[index].titleUrl,
           ),
         ),
       );

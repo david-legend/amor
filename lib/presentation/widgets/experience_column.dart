@@ -1,3 +1,4 @@
+import 'package:amor/presentation/widgets/empty.dart';
 import 'package:amor/utils/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
@@ -6,11 +7,12 @@ import 'package:amor/values/values.dart';
 class ExperienceColumn extends StatelessWidget {
   ExperienceColumn({
     required this.duration,
-    required this.position,
-    required this.company,
+    required this.title,
+    this.subtitle,
     required this.location,
     required this.roles,
-    this.companyUrl = "",
+    this.subtitleUrl = "",
+    this.iconData,
     this.roleTextStyle,
     this.companyTextStyle,
     this.locationTextStyle,
@@ -22,9 +24,10 @@ class ExperienceColumn extends StatelessWidget {
   });
 
   final String duration;
-  final String position;
-  final String company;
-  final String companyUrl;
+  final String title;
+  final IconData? iconData;
+  final String? subtitle;
+  final String subtitleUrl;
   final String location;
   final List<String> roles;
   final GestureTapCallback? onTap;
@@ -46,24 +49,26 @@ class ExperienceColumn extends StatelessWidget {
           Row(
             children: [
               SelectableText(
-                position,
+                title,
                 style: positionTextStyle ??
                     textTheme.headline6?.copyWith(
                       color: AppColors.primaryText,
                     ),
               ),
               SpaceW4(),
-              InkWell(
-                onTap: onTap ?? () => openUrlLink(companyUrl),
-                child: SelectableText(
-                  '@' + company,
-                  style: companyTextStyle ??
-                      textTheme.headline6?.copyWith(
-                        color: AppColors.purple500,
-                        fontSize: Sizes.TEXT_SIZE_16,
+              subtitle == null
+                  ? Container()
+                  : InkWell(
+                      onTap: onTap ?? () => openUrlLink(subtitleUrl),
+                      child: SelectableText(
+                        '@' + subtitle!,
+                        style: companyTextStyle ??
+                            textTheme.headline6?.copyWith(
+                              color: AppColors.purple500,
+                              fontSize: Sizes.TEXT_SIZE_16,
+                            ),
                       ),
-                ),
-              )
+                    )
             ],
           ),
           SelectableText(
@@ -111,14 +116,14 @@ class Body extends StatelessWidget {
   Body({
     required this.body,
     this.bodyTextStyle,
-    this.icon = Icons.arrow_right,
+    this.icon,
     this.iconSize = Sizes.ICON_SIZE_18,
     this.color = AppColors.purple500,
   });
 
   final String body;
   final TextStyle? bodyTextStyle;
-  final IconData icon;
+  final IconData? icon;
   final Color color;
   final double iconSize;
 
@@ -127,12 +132,14 @@ class Body extends StatelessWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Row(
       children: [
-        Icon(
-          icon,
-          size: iconSize,
-          color: color,
-        ),
-        SpaceW8(),
+        icon == null
+            ? Empty()
+            : Icon(
+                icon!,
+                size: iconSize,
+                color: color,
+              ),
+        icon == null ? Empty() : SpaceW8(),
         Expanded(
           child: SelectableText(
             body,

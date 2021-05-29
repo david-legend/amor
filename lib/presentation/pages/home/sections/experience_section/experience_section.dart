@@ -104,15 +104,16 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             vertical: Sizes.PADDING_16,
           ),
           child: ExperienceColumn(
-            position: experienceData[index].title,
+            title: experienceData[index].title,
             positionTextStyle: textTheme.headline6?.copyWith(
               color: AppColors.white,
             ),
-            company: experienceData[index].subtitle,
+            subtitle: experienceData[index].subtitle,
             companyTextStyle: textTheme.headline6?.copyWith(
               color: AppColors.accentColor,
               fontSize: Sizes.TEXT_SIZE_16,
             ),
+            iconData: Icons.arrow_right,
             duration: experienceData[index].duration,
             durationTextStyle: commonStyle,
             location: experienceData[index].location,
@@ -120,7 +121,7 @@ class _ExperienceSectionState extends State<ExperienceSection> {
             roles: experienceData[index].body,
             bodyTextStyle: commonStyle,
             bodyBulletIconColor: AppColors.accentColor,
-            companyUrl: experienceData[index].titleUrl,
+            subtitleUrl: experienceData[index].titleUrl,
           ),
         ),
       );
@@ -135,8 +136,8 @@ class _ExperienceSectionState extends State<ExperienceSection> {
       fontSize: Sizes.TEXT_SIZE_16,
     );
     return ExperienceTree(
-      headTitle: StringConst.CURRENT_MONTH_YEAR,
-      tailTitle: StringConst.STARTED_MONTH_YEAR,
+      headTitle: StringConst.WORK_CURRENT_MONTH_YEAR,
+      tailTitle: StringConst.WORK_STARTED_MONTH_YEAR,
       headTitleStyle: experienceTreeHeadStyle,
       tailTitleStyle: experienceTreeHeadStyle,
       leftLeafTitleStyle: textTheme.bodyText2?.copyWith(
@@ -160,6 +161,7 @@ class _ExperienceSectionState extends State<ExperienceSection> {
         fontSize: Sizes.TEXT_SIZE_15,
         color: AppColors.accentColor300,
       ),
+      rightLeafIconData: Icons.arrow_right,
       rightLeafBodyStyle: textTheme.bodyText2?.copyWith(
         color: AppColors.darkGrey150,
         fontSize: Sizes.TEXT_SIZE_15,

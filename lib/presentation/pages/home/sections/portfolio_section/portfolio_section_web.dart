@@ -8,12 +8,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-int dataLength = Data.portfolioData.length;
-const double kMainAxisSpacing = 4.0;
-const double kCrossAxisSpacing = 4.0;
+const double kMainAxisSpacing = 8.0;
+const double kCrossAxisSpacing = 8.0;
 const int portfolioItemHeight = 250;
 
-class PortfolioSectionWeb extends StatelessWidget {
+class PortfolioSectionWeb extends StatefulWidget {
+  @override
+  _PortfolioSectionWebState createState() => _PortfolioSectionWebState();
+}
+
+class _PortfolioSectionWebState extends State<PortfolioSectionWeb> {
   final List<String> tabs = [
     StringConst.GRAPHICS,
     StringConst.APP_DESIGN,
@@ -21,6 +25,16 @@ class PortfolioSectionWeb extends StatelessWidget {
     StringConst.GAME_DESIGN,
     StringConst.WEB_DESIGN,
     StringConst.ALL,
+  ];
+  List<StaggeredTile> _staggeredTiles = <StaggeredTile>[
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 3),
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 3),
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 2),
+    StaggeredTile.count(2, 2),
   ];
 
   @override
@@ -85,47 +99,46 @@ class PortfolioSectionWeb extends StatelessWidget {
                 }
               },
             ),
-
             Container(
-              height: 200,
+              height: 800,
               child: TabBarView(
                 children: [
-                  Icon(Icons.directions_car),
-                  Icon(Icons.directions_transit),
-                  Icon(Icons.directions_bike),
-                  Icon(Icons.directions_bike),
-                  Icon(Icons.directions_bike),
-                  Icon(Icons.directions_bike),
+//                  StaggeredGridView.count(
+//                    primary: false,
+//                    crossAxisCount: 4,
+//                    mainAxisSpacing: 4,
+//                    crossAxisSpacing: 4,
+//                    staggeredTiles: const <StaggeredTile>[
+//                      StaggeredTile.count(2, 2),
+//                      StaggeredTile.count(2, 1),
+//                      StaggeredTile.count(2, 2),
+//                      StaggeredTile.count(2, 1),
+//                      StaggeredTile.count(2, 2),
+//                      StaggeredTile.count(2, 1),
+//                      StaggeredTile.count(2, 2),
+//                      StaggeredTile.count(2, 1),
+//                    ],
+//                    children: const <Widget>[
+//                      Text('1'),
+//                      Text('2'),
+//                      Text('3'),
+//                      Text('4'),
+//                      Text('5'),
+//                      Text('6'),
+//                      Text('7'),
+//                      Text('8'),
+//                    ],
+//                  ),
+
+                  _buildPortfolioContent(Data.portfolioData),
+                  _buildPortfolioContent(Data.portfolioData),
+                  _buildPortfolioContent(Data.portfolioData),
+                  _buildPortfolioContent(Data.portfolioData),
+                  _buildPortfolioContent(Data.portfolioData),
+                  _buildPortfolioContent(Data.portfolioData),
                 ],
               ),
-            )
-//          Container(
-//            height: 100,
-//            width: screenWidth,
-////            (portfolioItemHeight * dataLength) +
-////                (kCrossAxisSpacing * dataLength),
-//            child: StaggeredGridView.countBuilder(
-//              crossAxisCount: 3,
-//              itemCount: dataLength,
-//              physics: NeverScrollableScrollPhysics(),
-//              itemBuilder: (BuildContext context, int index) {
-//                return Container(
-//                  color: Colors.amber,
-//                  height: 100,
-//                  child: PortfolioItem(
-//                    imageUrl: Data.portfolioData[index].imageUrl,
-//                    portfolioTitle: Data.portfolioData[index].title,
-//                    height: 100,
-//                    width: 100,
-//                  ),
-//                );
-//              },
-//              staggeredTileBuilder: (int index) =>
-//                  new StaggeredTile.count(3, index.isEven ? 2 : 1),
-//              mainAxisSpacing: kMainAxisSpacing,
-//              crossAxisSpacing: kCrossAxisSpacing,
-//            ),
-//          ),
+            ),
           ],
         ),
       ),
@@ -142,5 +155,58 @@ class PortfolioSectionWeb extends StatelessWidget {
     }
 
     return tabsItems;
+  }
+
+  Widget _buildPortfolioContent(List<PortfolioData> data) {
+    double screenWidth = widthOfScreen(context);
+//    return StaggeredGridView.countBuilder(
+//      crossAxisCount: 4,
+//      itemCount: 8,
+//      itemBuilder: (BuildContext context, int index) => new Container(
+//        color: Colors.green,
+//        child: new Center(
+//          child: new CircleAvatar(
+//            backgroundColor: Colors.white,
+//            child: new Text('$index'),
+//          ),
+//        ),
+//      ),
+//      staggeredTileBuilder: (int index) =>
+//          new StaggeredTile.count(2, index.isEven ? 2 : 1),
+//      mainAxisSpacing: 4.0,
+//      crossAxisSpacing: 4.0,
+//    );
+    return StaggeredGridView.countBuilder(
+      crossAxisCount: 3,
+      itemCount: data.length,
+      shrinkWrap: true,
+//      physics: NeverScrollableScrollPhysics(),
+      itemBuilder: (BuildContext context, int index) {
+        return Container(
+          color: Colors.amber,
+//          width: screenWidth * data[index].width,
+          height: 100,
+          child: PortfolioItem(
+            imageUrl: data[index].imageUrl,
+            portfolioTitle: data[index].title,
+            height: 150,
+//            width: screenWidth * data[index].width,
+          ),
+        );
+      },
+      staggeredTileBuilder: (int index) {
+        if (index == 1 || index == 5) {
+          return StaggeredTile.count(1, 3);
+//          return StaggeredTile.extent(1, 3);
+//          return StaggeredTile.fit(2);
+        } else {
+//          return StaggeredTile.fit(1);
+//          return StaggeredTile.extent(1, 2);
+          return StaggeredTile.count(1, 2);
+        }
+      },
+      mainAxisSpacing: kMainAxisSpacing,
+      crossAxisSpacing: kCrossAxisSpacing,
+    );
   }
 }

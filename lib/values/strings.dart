@@ -14,10 +14,11 @@ class StringConst {
 
   //Header Section
   static const String INTRO = "Hello! I'm";
+
 //  static const String NAME = "James Martin";
-  static const String NAME = "James Martin";
+  static const String NAME = "Jade Macy";
   static const String PROFESSIONAL_POSITION =
-      "Senior UX/UI Designer & Developer";
+      "Software Engineer & Data Scientist";
   static const String CATCH_LINE = "Meeting your digital product needs";
   static const String EMAIL = "mutesij97@gmail.com";
   static const String EMAIL_URL = "mailto:<$EMAIL>?subject=&body=";
@@ -27,10 +28,11 @@ class StringConst {
   static const String PROFESSIONAL = "Professional";
   static const String SUMMARY_TITLE = "Summary";
   static const String ABOUT_ME_SUMMARY_1 =
-      '''I am a versatile, enthusiastic and passionate UI/UX Designer with a solid background in Human-Centered''';
+      '''I am a versatile, enthusiastic and passionate Software engineer with a solid background in Backend Development''';
   static const String ABOUT_ME_SUMMARY_2 =
-      "Design to be integrated in User Experiences. Aims to have compelling opportunities to leverage and extend";
-  static const String ABOUT_ME_SUMMARY_3 = "my skills.";
+      "I'm a California-based software engineer who specializes in building (and occasionally designing) exceptional digital experiences.";
+  static const String ABOUT_ME_SUMMARY_3 =
+      "Currently, I'm an engineer at Apple focused on building highly interactive web applications for Apple Music";
   static const String ABOUT_ME_SUMMARY_4 =
       "I have learned and honed valuable collaboration and team management skills that have allowed me to both";
   static const String ABOUT_ME_SUMMARY_5 =
@@ -42,62 +44,65 @@ class StringConst {
   static const String EDUCATION = "Education";
 
   //Education Section Data
-  static const String CURRENT_MONTH_YEAR = "June 2014";
-  static const String STARTED_MONTH_YEAR = "May 2017";
+  static const String EDUCATION_CURRENT_MONTH_YEAR = "June 2021";
+  static const String EDUCATION_STARTED_MONTH_YEAR = "August 2014";
+  static const String WORK_CURRENT_MONTH_YEAR = "June 2018";
+  static const String WORK_STARTED_MONTH_YEAR = "Sept 2020";
 
-  static const String EDUCATION_1 = "Makedu";
-  static const String EDUCATION_1_URL = "https://bewsys.com/";
-  static const String POSITION_1 = "Software Engineer Intern";
-  static const String EDUCATION_1_ROLE_1 =
-      "Built a Quiz app under the supervision of software engineers using PHP and Javascript";
-  static const String EDUCATION_1_ROLE_2 =
-      "Architected and implemented the Back-end and Front-end of a Web application used for receiving complaints and feedback from other live apps.";
-  static const String EDUCATION_1_ROLE_3 =
-      "Learnt about Database programming and SQL";
-  static const String LOCATION_1 = "Aprade - Kumasi";
-  static const String DURATION_1 = "May 2017 - July 2017";
+  static const String EDUCATION_1 = "Msc. Information Technology";
+  static const String EDUCATION_1_URL = "https://www.cmu.edu/";
 
-  static const String EDUCATION_2 = "Shrinq";
-  static const String EDUCATION_2_URL = "https://shrinqghana.com/";
-  static const String POSITION_2 = "Software Engineer";
-  static const String EDUCATION_2_ROLE_1 =
-      "Proposed and implemented scalable solutions to issues identified in web applications.";
-  static const String EDUCATION_2_ROLE_2 =
-      "Built a mobile application used to verify the authenticity of an ID to help deter fraud and provide fast and seamless customer experience";
-  static const String EDUCATION_2_ROLE_3 =
-      "Developed highly interactive mobile applications for Vodafone Ghana using Java Android";
-  static const String EDUCATION_2_ROLE_4 =
-      "Developed and maintained code for in-house and client applications using primarily using HTML, CSS, JavaScript, PHP and Laravel";
-  static const String LOCATION_2 = "Asylum Down - Accra";
-  static const String DURATION_2 = "April 2018 - June 2019";
+//  static const String POSITION_1 = "Software Engineer Intern";
+  static const String EDUCATION_1_DESC =
+      "Majoring in applied machine learning and Data science.";
+  static const String LOCATION_1 =
+      "Carnegie Mellon University, Pittsburgh, USA";
+  static const String DURATION_1 = "Sept. 2020 - Dec. 2021";
 
-  static const String EDUCATION_3 = "Bewsys";
-  static const String EDUCATION_3_URL = "https://bewsys.com/";
-  static const String POSITION_3 = "Software Engineer";
-  static const String EDUCATION_3_ROLE_1 =
-      "Worked with a team of two Software to build a management system for the National Prisons Service Of South Sudan";
-  static const String EDUCATION_3_ROLE_2 =
-      "Interfaced with clients on a weekly basis, providing technological expertise";
-  static const String EDUCATION_3_ROLE_3 =
+  static const String EDUCATION_2 = "Bsc. Computer Science";
+  static const String EDUCATION_2_URL = "https://www.stanford.edu/";
+  static const String EDUCATION_2_DESC =
+      "Majored in Software Engineering and minored in Data Science";
+  static const String LOCATION_2 = "Stanford University, California";
+  static const String DURATION_2 = "August 2014 - May 2018";
+
+  static const String WORK_1 = "Google";
+  static const String WORK_1_URL = "https://pay.google.com/about/";
+  static const String WORK_1_POSITION = "Software Engineer Intern";
+  static const String WORK_1_ROLE_1 =
+      "Write modern, performant, maintainable code for a diverse array of client and internal projects";
+  static const String WORK_1_ROLE_2 =
+      "Communicate with multi-disciplinary teams of engineers, designers, producers, and clients on a daily basis";
+  static const String WORK_1_ROLE_3 =
       "Modified existing software to correct errors, upgrade interfaces and improve performance";
-  static const String EDUCATION_3_ROLE_4 =
+  static const String WORK_1_ROLE_4 =
       "Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences across web and mobile applications.";
-  static const String LOCATION_3 = "East Legon - Accra";
-  static const String DURATION_3 = "August 2019 - April 2020";
+  static const String WORK_1_LOCATION = "Mountain View, California, USA";
+  static const String WORK_1_DURATION = "June 2017 - August 2017";
 
-  static const String EDUCATION_4 = "Freelancer";
-  static const String EDUCATION_4_URL = "url";
-  static const String POSITION_4 = "Software Engineer";
-  static const String EDUCATION_4_ROLE_1 =
-      "Work collaboratively with a user experience designer to bring mobile and progressive apps to life using Flutter.";
-  static const String EDUCATION_4_ROLE_2 =
-      "Write modern, performant, maintainable code for a clients and personal open source projects";
-  static const String EDUCATION_4_ROLE_3 =
-      "Work with a variety of different languages, platforms, frameworks, and content management systems such as Dart, JavaScript, PHP, Flutter, Laravel, Wordpress, and Bootstrap";
-  static const String EDUCATION_4_ROLE_4 =
-      "Interface with clients and provide technological expertise";
-  static const String LOCATION_4 = "Santase - Kumasi";
-  static const String DURATION_4 = "May 2020 - Current";
+  static const String WORK_2 = "Scout";
+  static const String WORK_2_URL = "https://web.northeastern.edu/scout/";
+  static const String WORK_2_POSITION = "Studio Developer";
+  static const String WORK_2_ROLE_1 =
+      "Worked with a team of three designers to build a marketing website and e-commerce platform for blistabloc, an ambitious startup originating from Northeastern";
+  static const String WORK_2_ROLE_2 =
+      "Interfaced with clients on a weekly basis, providing technological expertise";
+  static const String WORK_2_ROLE_3 =
+      "Modified existing software to correct errors, upgrade interfaces and improve performance";
+  static const String WORK_2_LOCATION = "California, USA";
+  static const String WORK_2_DURATION = "June 2018 - May 2019";
+
+  static const String WORK_3 = "Apple";
+  static const String WORK_3_URL = "https://www.apple.com/music/";
+  static const String WORK_3_POSITION = "UI Engineer Co-op ";
+  static const String WORK_3_ROLE_1 =
+      "Developed and shipped highly interactive web applications for Apple Music using Ember.js";
+  static const String WORK_3_ROLE_2 =
+      "Built and shipped the Apple Music Extension within Facebook Messenger leveraging third-party and internal APIs";
+  static const String WORK_3_ROLE_3 =
+      "Contributed extensively to MusicKit.js, a JavaScript framework that allows developers to add an Apple Music player to their web apps";
+  static const String WORK_3_LOCATION = "California - USA";
+  static const String WORK_3_DURATION = "June 2019 - August 2020";
 
   //Experience Section
   static const String EXPERIENCE = "Experience";
@@ -116,6 +121,10 @@ class StringConst {
 
   static const IOT_CERT = "IOT Certification";
   static const RISA = "RISA";
+  static const ASSOCIATE_ANDROID_DEV_CERT = "Associate Android Developer";
+  static const GOOGLE = "Google";
+  static const DATA_SCIENCE_CERT = "Data Science";
+  static const UDACITY = "Udacity";
 
   //Portfolio Section
   static const String PORTFOLIO = "Portfolio";

@@ -4,10 +4,14 @@ import 'package:flutter/material.dart';
 class PortfolioData {
   final String imageUrl;
   final String title;
+  final double width;
+  final double height;
 
   const PortfolioData({
     required this.imageUrl,
     required this.title,
+    required this.width,
+    required this.height,
   });
 }
 
@@ -31,6 +35,7 @@ class PortfolioItem extends StatelessWidget {
     TextTheme textTheme = Theme.of(context).textTheme;
     return Column(
       mainAxisSize: MainAxisSize.min,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Align(
           alignment: Alignment.centerLeft,

@@ -19,7 +19,7 @@
 
 <br/><br/>
 ### Mobile View
-![Screenshot](assets/screenshots/amor_cv_2.gif)
+![Screenshot](assets/screenshots/amor_cv_mobile.gif)
 
 ![Screenshot](assets/screenshots/actual_header.png)
 ![Screenshot](assets/screenshots/actual_about.png)

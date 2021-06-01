@@ -12,15 +12,23 @@
 </p>
 
 <br/><br/>
+
+### Enjoy!!!
 ![Screenshot](assets/screenshots/amor_cv_1.gif)
 
 <br/><br/>
+
+### Web View 2
 ![Screenshot](assets/screenshots/amor_cv_2.gif)
 
 <br/><br/>
+
 ### Mobile View
 ![Screenshot](assets/screenshots/amor_cv_mobile.gif)
 
+<br/><br/>
+
+## Pages
 ![Screenshot](assets/screenshots/actual_header.png)
 ![Screenshot](assets/screenshots/actual_about.png)
 ![Screenshot](assets/screenshots/actual_education.png)

@@ -21,7 +21,7 @@ class _NavSectionWebState extends State<NavSectionWeb> {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
+    double sidePadding = getSidePadding(context);
     double screenWidth = widthOfScreen(context);
     double contentAreaWidth = screenWidth * 0.5;
 

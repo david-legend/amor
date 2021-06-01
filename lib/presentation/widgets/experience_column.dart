@@ -3,6 +3,7 @@ import 'package:amor/utils/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
+import 'package:layout/layout.dart';
 
 class ExperienceColumn extends StatelessWidget {
   ExperienceColumn({
@@ -42,6 +43,13 @@ class ExperienceColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
+    double titleFontSize = context.layout.value(
+      xs: Sizes.TEXT_SIZE_18,
+      sm: Sizes.TEXT_SIZE_20,
+      md: Sizes.TEXT_SIZE_20,
+      lg: Sizes.TEXT_SIZE_20,
+      xl: Sizes.TEXT_SIZE_20,
+    );
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -53,6 +61,7 @@ class ExperienceColumn extends StatelessWidget {
                 style: positionTextStyle ??
                     textTheme.headline6?.copyWith(
                       color: AppColors.primaryText,
+                      fontSize: titleFontSize,
                     ),
               ),
               SpaceW4(),

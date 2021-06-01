@@ -19,7 +19,7 @@ class ExperienceSection extends StatefulWidget {
 class _ExperienceSectionState extends State<ExperienceSection> {
   @override
   Widget build(BuildContext context) {
-    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
+    double sidePadding = getSidePadding(context);
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
     double circleWidth = screenWidth * 0.1;

@@ -17,7 +17,7 @@ class HeaderSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     TextTheme textTheme = Theme.of(context).textTheme;
-    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
+    double sidePadding = getSidePadding(context);
     double contentAreaWidth = assignWidth(context, 0.5);
     double contentAreaHeight = assignHeight(context, 0.7);
     double introTextSize = context.layout.value(

@@ -19,7 +19,7 @@ class FooterSection extends StatelessWidget {
   Widget build(BuildContext context) {
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
-    double sidePadding = screenWidth / Sizes.DIVISIONS;
+    double sidePadding = getSidePadding(context);
     double footerHeight = screenHeight * 0.2;
     double bottomPadding = context.layout.value(
       xs: Sizes.PADDING_0,

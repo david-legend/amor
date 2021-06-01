@@ -13,6 +13,7 @@ import 'package:amor/presentation/widgets/spaces.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:layout/layout.dart';
 
 import 'sections/portfolio_section/portfolio_section.dart';
 
@@ -36,7 +37,7 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    double sidePadding = widthOfScreen(context) / Sizes.DIVISIONS;
+    double sidePadding = getSidePadding(context);
     return Scaffold(
       key: _scaffoldKey,
       drawer: ResponsiveBuilder(

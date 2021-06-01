@@ -1,4 +1,6 @@
+import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:layout/layout.dart';
 
 enum DisplayType {
   desktop,
@@ -68,4 +70,16 @@ double assignWidth(
   double subs = 0,
 }) {
   return (widthOfScreen(context) - (subs) + (additions)) * fraction;
+}
+
+double getSidePadding(BuildContext context) {
+  double sidePaddingDesktop = widthOfScreen(context) / Sizes.DIVISIONS_DESKTOP;
+  double sidePaddingMobile = widthOfScreen(context) / Sizes.DIVISIONS_MOBILE;
+  return context.layout.value(
+    xs: sidePaddingMobile,
+    sm: sidePaddingDesktop,
+    md: sidePaddingDesktop,
+    lg: sidePaddingDesktop,
+    xl: sidePaddingDesktop,
+  );
 }

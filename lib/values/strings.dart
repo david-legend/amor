@@ -20,7 +20,7 @@ class StringConst {
   static const String PROFESSIONAL_POSITION =
       "Software Engineer & Data Scientist";
   static const String CATCH_LINE = "Meeting your digital product needs";
-  static const String EMAIL = "mutesij97@gmail.com";
+  static const String EMAIL = "davidcobbina47@gmail.com";
   static const String EMAIL_URL = "mailto:<$EMAIL>?subject=&body=";
 
   //About Section

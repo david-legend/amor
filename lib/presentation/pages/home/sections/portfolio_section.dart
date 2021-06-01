@@ -59,7 +59,8 @@ class _PortfolioSectionState extends State<PortfolioSection> {
             SpaceH40(),
             ResponsiveBuilder(
               builder: (context, sizingInformation) {
-                if (sizingInformation.isTablet) {
+                if (sizingInformation.screenSize.width >
+                    RefinedBreakpoints().tabletLarge) {
                   return TabBar(
                     labelStyle: labelTextStyle,
                     unselectedLabelStyle: labelTextStyle,
@@ -79,7 +80,7 @@ class _PortfolioSectionState extends State<PortfolioSection> {
                   );
                 } else {
                   return Container(
-                    width: screenWidth * 0.7,
+                    width: double.infinity,
                     child: TabBar(
                       labelStyle: labelTextStyle,
                       unselectedLabelStyle: labelTextStyle,
@@ -87,15 +88,12 @@ class _PortfolioSectionState extends State<PortfolioSection> {
                       indicatorSize: TabBarIndicatorSize.tab,
                       unselectedLabelColor: AppColors.darkGrey600,
                       overlayColor: MaterialStateProperty.all(Colors.white),
-                      isScrollable: false,
+                      isScrollable: true,
                       indicator: BubbleTabIndicator(
                         indicatorHeight: Sizes.HEIGHT_44,
                         indicatorColor: AppColors.purple700,
                         tabBarIndicatorSize: TabBarIndicatorSize.tab,
-                        insets: EdgeInsets.symmetric(
-                          horizontal: Sizes.PADDING_16,
-                          vertical: Sizes.PADDING_0,
-                        ),
+                        insets: EdgeInsets.zero,
                         padding: EdgeInsets.zero,
                       ),
                       tabs: _buildTabs(tabs),

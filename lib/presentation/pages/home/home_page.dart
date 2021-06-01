@@ -1,12 +1,12 @@
 import 'package:amor/presentation/layout/adaptive.dart';
-import 'package:amor/presentation/pages/home/sections/about_section/about_section.dart';
-import 'package:amor/presentation/pages/home/sections/education_section/education_section.dart';
-import 'package:amor/presentation/pages/home/sections/experience_section/experience_section.dart';
-import 'package:amor/presentation/pages/home/sections/footer_section/footer_section.dart';
-import 'package:amor/presentation/pages/home/sections/header_section/header_section.dart';
+import 'package:amor/presentation/pages/home/sections/about_section.dart';
+import 'package:amor/presentation/pages/home/sections/education_section.dart';
+import 'package:amor/presentation/pages/home/sections/experience_section.dart';
+import 'package:amor/presentation/pages/home/sections/footer_section.dart';
+import 'package:amor/presentation/pages/home/sections/header_section.dart';
 import 'package:amor/presentation/pages/home/sections/nav_section/nav_section_mobile.dart';
 import 'package:amor/presentation/pages/home/sections/nav_section/nav_section_web.dart';
-import 'package:amor/presentation/pages/home/sections/skills_section/skills_section.dart';
+import 'package:amor/presentation/pages/home/sections/skills_section.dart';
 import 'package:amor/presentation/widgets/app_drawer.dart';
 import 'package:amor/presentation/widgets/nav_item.dart';
 import 'package:amor/presentation/widgets/spaces.dart';
@@ -15,7 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:layout/layout.dart';
 
-import 'sections/portfolio_section/portfolio_section.dart';
+import 'sections/portfolio_section.dart';
 
 class HomePage extends StatefulWidget {
   @override

@@ -86,7 +86,7 @@ class _AboutSectionState extends State<AboutSection> {
           CustomPaint(
             painter: Circle(
               offset: Offset(
-                screenWidth * 0.875,
+                screenWidth * 0.78,
                 sectionTitleOffset + kSpacing16 + (aboutMeContainerOffset / 2),
               ),
               radius: (aboutMeContainerOffset / 2) - kSpacing16,

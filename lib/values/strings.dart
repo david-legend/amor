@@ -55,8 +55,7 @@ class StringConst {
 //  static const String POSITION_1 = "Software Engineer Intern";
   static const String EDUCATION_1_DESC =
       "Majoring in applied machine learning and Data science.";
-  static const String LOCATION_1 =
-      "Carnegie Mellon University, Pittsburgh, USA";
+  static const String LOCATION_1 = "Carnegie Mellon University, Pit, USA";
   static const String DURATION_1 = "Sept. 2020 - Dec. 2021";
 
   static const String EDUCATION_2 = "Bsc. Computer Science";
@@ -135,6 +134,13 @@ class StringConst {
   static const String WEB_DESIGN = "Web Design";
   static const String ALL = "All";
   static const String DIGITAL_WALL_POSTER = "Digital Wall Poster";
+  static const String SPACE_STORY = "Space Story";
+  static const String STREET_ART = "Street Art";
+  static const String SOUL_TEARS = "Soul Tears";
+  static const String MURAL_PRIDE = "Mural Pride";
+  static const String ABYSS = "Abyss";
+  static const String AURORA_PISTON = "Aurora Piston";
+  static const String FREESTYLE = "Freestyle";
 
   //Footer Section
   static const String RIGHTS_RESERVED = "© 2021 All rights reserved";

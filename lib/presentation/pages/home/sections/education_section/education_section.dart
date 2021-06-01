@@ -9,7 +9,7 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-const double smCircleRadius = 200;
+const double smCircleRadius = 160;
 const double lgCircleRadius = 280;
 
 class EducationSection extends StatelessWidget {
@@ -18,8 +18,8 @@ class EducationSection extends StatelessWidget {
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
     double circleWidth = screenWidth * 0.1;
-    double smOffsetDx = -smCircleRadius / 2;
-    double smOffsetDy = screenHeight * 0.7;
+    double smOffsetDx = -smCircleRadius;
+    double smOffsetDy = screenHeight * 0.6;
     double lgOffsetDx = circleWidth + (lgCircleRadius / 3);
     double lgOffsetDy = screenHeight * 0.2;
 
@@ -62,7 +62,8 @@ class EducationSection extends StatelessWidget {
               ),
               ResponsiveBuilder(
                 builder: (context, sizingInformation) {
-                  if (sizingInformation.isMobile) {
+                  if (sizingInformation.screenSize.width <=
+                      RefinedBreakpoints().tabletExtraLarge) {
                     return Column(
                       children:
                           _buildEducationSectionForMobile(Data.educationData),

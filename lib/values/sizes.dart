@@ -1,7 +1,7 @@
 part of values;
 
 class Sizes {
-  static const double DIVISIONS = 15.0;
+  static const double DIVISIONS = 8.0;
   static const double HEIGHT_OF_BOTTOM_NAV_BAR = 64.0;
   static const double SAFE_AREA_MARGIN = 24.0;
   static const double SIZE_120 = 120.0;

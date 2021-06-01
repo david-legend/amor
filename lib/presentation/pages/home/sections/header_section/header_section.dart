@@ -187,7 +187,7 @@ class HeaderSection extends StatelessWidget {
               )
             : Container(),
         Image.asset(
-          ImagePath.sm_11,
+          ImagePath.JADE_MACY,
           width: width - kPadding24,
           fit: BoxFit.cover,
         ),

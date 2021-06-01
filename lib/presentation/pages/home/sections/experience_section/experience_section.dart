@@ -70,7 +70,8 @@ class _ExperienceSectionState extends State<ExperienceSection> {
               ),
               ResponsiveBuilder(
                 builder: (context, sizingInformation) {
-                  if (sizingInformation.isMobile) {
+                  if (sizingInformation.screenSize.width <
+                      RefinedBreakpoints().desktopSmall) {
                     return Column(
                       children:
                           _buildExperienceSectionForMobile(Data.experienceData),

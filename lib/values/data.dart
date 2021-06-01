@@ -90,50 +90,34 @@ class Data {
     PortfolioData(
       imageUrl: ImagePath.art_1,
       title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
     ),
     PortfolioData(
       imageUrl: ImagePath.art_2,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.35,
-      height: 0.3,
+      title: StringConst.FREESTYLE,
     ),
     PortfolioData(
       imageUrl: ImagePath.art_3,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
+      title: StringConst.AURORA_PISTON,
     ),
     PortfolioData(
       imageUrl: ImagePath.art_4,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
+      title: StringConst.SPACE_STORY,
     ),
     PortfolioData(
       imageUrl: ImagePath.art_5,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.35,
-      height: 0.3,
+      title: StringConst.ABYSS,
+    ),
+    PortfolioData(
+      imageUrl: ImagePath.art_7,
+      title: StringConst.STREET_ART,
     ),
     PortfolioData(
       imageUrl: ImagePath.art_6,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
+      title: StringConst.MURAL_PRIDE,
     ),
     PortfolioData(
-      imageUrl: ImagePath.art_7,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
-    ),
-    PortfolioData(
-      imageUrl: ImagePath.art_7,
-      title: StringConst.DIGITAL_WALL_POSTER,
-      width: 0.3,
-      height: 0.3,
+      imageUrl: ImagePath.art_8,
+      title: StringConst.SOUL_TEARS,
     ),
   ];
 }

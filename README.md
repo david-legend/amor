@@ -25,6 +25,8 @@
 <br/><br/>
 <br/><br/>
 
+## Actual Designs Used
+
 ![Screenshot](assets/screenshots/amor_typography.png)
 ![Screenshot](assets/screenshots/amor_home.png)
 ![Screenshot](assets/screenshots/amor_about.png)

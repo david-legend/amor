@@ -34,7 +34,7 @@ class _AppDrawerState extends State<AppDrawer> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: widget.width ?? assignWidth(context, 0.7),
+      width: widget.width ?? assignWidth(context, 0.85),
       child: Drawer(
         child: Container(
           color: widget.color,

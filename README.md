@@ -18,7 +18,6 @@
 
 <br/><br/>
 
-### Web View 2
 ![Screenshot](assets/screenshots/amor_cv_2.gif)
 
 <br/><br/>

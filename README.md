@@ -14,6 +14,7 @@
 <br/><br/>
 
 ![Screenshot](assets/screenshots/amor_cv_1.gif)
+<br/><br/>
 ![Screenshot](assets/screenshots/amor_cv_2.gif)
 
 ![Screenshot](assets/screenshots/actual_header.png)

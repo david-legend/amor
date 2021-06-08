@@ -8,8 +8,12 @@ import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
-const double smCircleRadius = 200;
-const double lgCircleRadius = 280;
+import 'package:layout/layout.dart';
+
+const double smCircleRadiusDx = 80;
+const double lgCircleRadiusDx = 160;
+const double smCircleRadiusDy = 160;
+const double lgCircleRadiusDy = 240;
 
 class ExperienceSection extends StatefulWidget {
   @override
@@ -19,6 +23,20 @@ class ExperienceSection extends StatefulWidget {
 class _ExperienceSectionState extends State<ExperienceSection> {
   @override
   Widget build(BuildContext context) {
+    double smCircleRadius = context.layout.value(
+      xs: smCircleRadiusDx,
+      sm: smCircleRadiusDx,
+      md: lgCircleRadiusDx,
+      lg: lgCircleRadiusDx,
+      xl: lgCircleRadiusDx,
+    );
+    double lgCircleRadius = context.layout.value(
+      xs: smCircleRadiusDy,
+      sm: smCircleRadiusDy,
+      md: lgCircleRadiusDy,
+      lg: lgCircleRadiusDy,
+      xl: lgCircleRadiusDy,
+    );
     double sidePadding = getSidePadding(context);
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);

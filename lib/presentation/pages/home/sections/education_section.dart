@@ -8,13 +8,30 @@ import 'package:amor/presentation/widgets/sub_section_title.dart';
 import 'package:amor/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+import 'package:layout/layout.dart';
 
-const double smCircleRadius = 160;
-const double lgCircleRadius = 280;
+const double smCircleRadiusDx = 80;
+const double lgCircleRadiusDx = 160;
+const double smCircleRadiusDy = 160;
+const double lgCircleRadiusDy = 280;
 
 class EducationSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    double smCircleRadius = context.layout.value(
+      xs: smCircleRadiusDx,
+      sm: smCircleRadiusDx,
+      md: lgCircleRadiusDx,
+      lg: lgCircleRadiusDx,
+      xl: lgCircleRadiusDx,
+    );
+    double lgCircleRadius = context.layout.value(
+      xs: smCircleRadiusDy,
+      sm: smCircleRadiusDy,
+      md: lgCircleRadiusDy,
+      lg: lgCircleRadiusDy,
+      xl: lgCircleRadiusDy,
+    );
     double screenWidth = widthOfScreen(context);
     double screenHeight = heightOfScreen(context);
     double circleWidth = screenWidth * 0.1;
